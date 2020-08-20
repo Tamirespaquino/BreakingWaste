@@ -1,0 +1,105 @@
+/* GERAIS */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+p, li{
+    font-size: 14px;
+}
+
+/* Barra de navegação */
+
+
+
+header, .navbar {
+    background: #292E33;
+
+}
+
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 200px;
+}
+
+.navbar-brand {
+    color: white;
+    padding: 0;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+#navbar-links a {
+    font-weight: 600;
+    color: white;
+}
+
+#navbar-links a:hover {
+    color: #14B241;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1em .8em;
+}
+
+
+/* footer  */
+
+.footer-list {
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+}
+
+.footer-list li a {
+    color: #14B241;
+}
+
+.rodape {
+    color: white;
+    width: 100%;
+    padding:  3% 4%;
+    text-align: center;
+    background: #292E33;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    margin: 10px;
+    color: white;
+}
+
+.social-icons a:hover {
+    color: #14B241;
+}
+
+.copyright {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .footer-list {
+        
+        display: inline;
+        
+    }
+
+    .footer-list li {
+        margin-bottom: 10px;
+}
+
+
