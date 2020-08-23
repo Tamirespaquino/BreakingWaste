@@ -29,12 +29,11 @@ p, li{
 
 
 header {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 header, .navbar {
-    background: #292E33;
-
+  background: #292E33;
 }
 
 #nav-container{
@@ -47,12 +46,11 @@ header, .navbar {
 }
 
 .navbar-brand {
-    color: white;
     padding: 0;
 }
 
 .navbar-brand:hover {
-    color: white;
+    color: black;
 }
 
 .navbar-brand img {
