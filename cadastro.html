@@ -28,7 +28,7 @@
 <body>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="logo.png" alt="" width=180 height=40/></a>
+    <a class="navbar-brand" href="home.html"><img src="logo.png" alt="" width=180 height=40/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,19 +36,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav nav-pills">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+          <a class="nav-link" href="home.html">Home<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Quem Somos</a>
+          <a class="nav-link" href="quem_somos.html">Quem Somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Como Funciona?</a>
+          <a class="nav-link" href="como_funciona.html">Como Funciona?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cadastre sua Empresa</a>
+          <a class="nav-link" href="cadastro.html">Cadastre sua Empresa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Entre</a>
+          <a class="nav-link" href="cadastre_empresa.html">Entre</a>
         </li>
       </ul>
     </div>
@@ -62,8 +62,151 @@
     <p></p>     
   </div>
 
-  <!--Container central-->
-  
+  <!--FORMULÁRIO DE CADASTRO-->
+  <main>
+
+    <!-- formulário sessão e-mail-->
+    <div class="container col-md-6">
+      <form class="form-group col-md-12">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Endereço de email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+          <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+        </div>
+        <div class="form-group ">
+          <label for="exampleInputPassword1">Senha</label>
+          <input type="password" class="form-control" id="senha" placeholder="Senha">
+        </div>
+
+        <div class="form-group ">
+          <label for="exampleInputPassword1">Confirmar senha</label>
+          <input type="password" class="form-control" id="senha" placeholder="Confirme sua senha">
+        </div>
+        
+        
+      </form>
+    </div>
+
+    <!--formulário sessão dados da empresa-->
+    <div class="container col-md-6">
+      
+          <form class="form-group col-md-12">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Razão social</label>
+              <input type="text" class="form-control" id="razaosocial" placeholder="MINHA EMPRESA.LTDA">
+            </div>
+            
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">CNPJ</label>
+                  <input type="text" class="form-control" onkeypress="$(this).mask('00.000.000/0000-00')" placeholder="XX.XXX.XXX/XXXX-XX">
+                </div>
+                
+                <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">TELEFONE</label>
+                  <input type="text" class="form-control" onkeypress="$(this).mask('(00)000000000')" placeholder="(00)123456789">
+                </div>  
+
+              </div>
+
+              <div class="form-group">
+                <label for="formGroupExampleInput">ENDEREÇO</label>
+                <input type="text" class="form-control" id="endereco" placeholder="MINHA EMPRESA.LTDA">
+              </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="formGroupExampleInput">NÚMERO</label>
+                <input type="text" class="form-control" id="numero" placeholder="NÚMERO">
+              </div>  
+            
+              <div class="form-group col-md-4">
+                <label for="formGroupExampleInput">BAIRRO</label>
+                <input type="text" class="form-control" id="bairro" placeholder="BAIRRO">
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="formGroupExampleInput">COMPLEMENTO</label>
+                <input type="text" class="form-control" id="complemento" placeholder="COMPLEMENTO">
+              </div>
+                
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">Cidade</label>
+                <input type="text" class="form-control" id="cidade">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="estado">Estado</label>
+                <select id="estado" class="form-control">
+                  <option selected disabled>SELECIONE</option>
+                  <option>AC</option>
+                  <option>AL</option>
+                  <option>AP</option>
+                  <option>AM</option>
+                  <option>BA</option>
+                  <option>CE</option>
+                  <option>DF</option>
+                  <option>ES</option>
+                  <option>GO</option>
+                  <option>MA</option>
+                  <option>MT</option>
+                  <option>MS</option>
+                  <option>MG</option>
+                  <option>PA</option>
+                  <option>PB</option>
+                  <option>PR</option>
+                  <option>PE</option>
+                  <option>PI</option>
+                  <option>RJ</option>
+                  <option>RN</option>
+                  <option>RS</option>
+                  <option>RO</option>
+                  <option>RR</option>
+                  <option>SC</option>
+                  <option>SP</option>
+                  <option>SE</option>
+                  <option>TO</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="CEP">CEP</label>
+                <input type="text" id="CEP" class="form-control" onkeypress="$(this).mask('00.000-000')">
+              </div>
+            </div>
+
+              <div class="form-group col-md-12">
+                  <div><label for="inputCity">SITUAÇÃO DE FUNCIONAMENTO</label></div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="ativa" name="situacao" class="custom-control-input">
+                  <label class="custom-control-label" for="ativa">Situação Ativa</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="inativa" name="situacao" class="custom-control-input">
+                  <label class="custom-control-label" for="inativa">Situação Inativa</label>
+                </div>
+              </div>  
+
+              <div class="container">
+                <div class="form-group col-md-12">
+                  <button type="submit" class="btn btn-success">Finalizar Cadastro</button>
+                </div>  
+              </div>
+               
+          </form>   
+          
+          
+            
+          
+
+         </div>
+  </div>
+
+
+  </main>
   
 <!--Footer-->
 <footer class="page-footer font-small blue pt-4">
@@ -121,6 +264,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </body>
   
 
