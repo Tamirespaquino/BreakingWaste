@@ -28,7 +28,7 @@
 <body>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="logo.png" alt="" width=180 height=40/></a>
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="" width=180 height=40 /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -55,128 +55,155 @@
     <div class="nav-faixa"></div>
   </nav>
 
-    <!--jumbotron-->
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container-fluid">
-      <h1><span class="badge badge-pill badge-success">Cotação de coleta ideal para sua empresa</span></h1>
-      <h2><span class="badge badge-pill badge-light">A sua experiência em descarte mais rápida e descomplicada</span></h2>
+  <!--jumbotron-->
+  
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+      <h2 class="text-md-center"><span class="badge-fluid badge-pill badge-success">Cotação de coleta ideal para sua empresa</span></h2>
+      <p></p>
+      <h3 class="text-md-center"><span class="badge-fluid badge-pill badge-light">A sua experiência em descarte de resíduos químicos mais rápida e descomplicada</span></h3>
+      </div>
     </div>
-    <p></p>     
-  </div>
 
   <!--Container central-->
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <h2>Faça sua Cotação</h2>
+        <h3 class="text-center"><span class="badge badge-pill badge-light">Faça sua cotação</span></h3>
         <br></br>
         <form action="/action_page.php">
-                   <div class="form-group">
-            <label for="tiporesiduo">Tipo de resíduo:</label>
-            <select class="form-control" id="tiporesiduo" name="tiporesiduo">
+          <div class="form-group">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de resíduo</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
               <option value="0" selected desabled>Selecione</option>
-              <option>Solventes clorados</option>
-              <option>Solventes não clorados</option>
-              <option>Metais pesados em solução</option>
-              <option>Metais pesados em estado sólido</option>
-              <option>Ácidos</option>
-              <option>Bases</option>
-              <option>Aminas</option>
-              <option>Cianetos</option>
-              <option>Fenois</option>
-              <option>Pesticidas</option>
-              <option>Outros</option>
+              <option value="1">Solventes clorados</option>
+              <option value="2">Solventes não clorados</option>
+              <option value="3">Metais pesados em solução</option>
+              <option value="4">Metais pesados em estado sólido</option>
+              <option value="5">Ácidos</option>
+              <option value="6">Bases</option>
+              <option value="7">Aminas</option>
+              <option value="8">Cianetos</option>
+              <option value="9">Fenois</option>
+              <option value="10">Pesticidas</option>
+              <option value="11">Outros</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="CEP">CEP de retirada:</label>
-            <input type="number" class="custom-number" id="CEP" name="CEP"/>
-          </div>
-          <div class="form-group">
-            <label for="tipobombona">Tipo de bombona(l):</label>
-            <select class="form-control" id="tipobombona" name="tipobombona">
-              <option value="0" selected desabled>Selecione</option>
-              <option>50l</option>
-              <option>60l</option>
-              <option>70l</option>
-              <option>80l</option>
-              <option>90l</option>
-              <option>100l</option>
-              <option>110l</option>
-              <option>120l</option>
-              <option>130l</option>
-              <option>140l</option>
-              <option>150l</option>
-              <option>160l</option>
-              <option>170l</option>
-              <option>180l</option>
-              <option>190l</option>
-              <option>200l</option>
-              <option>210l</option>
-              <option>220l</option>
-              <option>230l</option>
-              <option>240l</option>
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tamanho das bombonas</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <option selected disabled>Selecione</option>
+              <option value="1">10 litros</option>
+              <option value="2">20 litros</option>
+              <option value="3">30 litros</option>
+              <option value="4">40 litros</option>
+              <option value="5">50 litros</option>
+              <option value="6">60 litros</option>
+              <option value="7">70 litros</option>
+              <option value="8">80 litros</option>
+              <option value="9">90 litros</option>
+              <option value="10">100 litros</option>
+              <option value="11">110 litros</option>
+              <option value="12">120 litros</option>
+              <option value="13">130 litros</option>
+              <option value="14">140 litros</option>
+              <option value="15">150 litros</option>
+              <option value="16">160 litros</option>
+              <option value="17">170 litros</option>
+              <option value="18">180 litros</option>
+              <option value="19">190 litros</option>
+              <option value="20">200 litros</option>
+              <option value="21">Outro</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="quantidade">Quantidade de bombonas:</label>
-            <input type="number" class="custom-number" id="quantidade" name="quantidade"/>
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <option selected disabled>Selecione</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">Outro</option>
             </select>
           </div>
-          <button type="button" class="btn btn-success">Descartar</button>
-        </form>
+          <div class="form-group">
+            <label for="inputCEP">CEP de Retirada</label>
+            <input type="text" class="form-control" id="inputCEP">
+          </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block btn-success" type="submit">Descartar</button>
       </div>
-      <div class="col-sm-12 col-md-6"><img src="Asset 1.png" alt="" width=600 height=400/>
+      <div class="col-sm-12 col-md-6">
+        <div class="container-lg-fluid">
+          <br></br>
+          <br></br>
+           <img src="Asset 1.png" alt="Logística" width=100% height=100% class="float-left"/>
+        </div>
       </div>
     </div>
   </div>
-<!--Footer-->
-<footer class="page-footer font-small blue pt-4">
-  <div class="container-fluid p-3 my-3 bg-dark text-white">
-  </div>  
+  <!--Footer-->
+  <footer class="page-footer font-small blue pt-4">
+    <div class="container-fluid p-3 my-3 bg-dark text-white">
+    </div>
     <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-center">
+    <div class="container-fluid text-center text-md-center">
 
-    <h5 class="text-uppercase"></h5>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <p class="footer-links">
-            <a href="#">A Empresa</a>
-            |
-            <a href="#">Parceiros</a>
-            |
-            <a href="#">Tipos de Resíduos</a>
-            |
-            <a href="#">Logística</a>
-            |
-            <a href="#">Fale Conosco</a>
-          </p>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="footer-links">
-            <a href="https://www.fcebook.com.br" class="button" role="button" aria-pressed="true"><img src="face.png"
-                alt="" width=40 height=40>
-            </a>
-            <a href="https://instagram.com" class="button" role="button" aria-pressed="true"><img src="insta.png"
-                alt="" width=40 height=40>
-            </a>
-            <a href="https://linkedin.com.br" class="button" role="button" aria-pressed="true"><img src="linked.png"
-                alt="" width=40 height=40>
-            </a>
+      <h5 class="text-uppercase"></h5>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <p class="footer-links">
+              <a href="#">A Empresa</a>
+              |
+              <a href="#">Parceiros</a>
+              |
+              <a href="#">Tipos de Resíduos</a>
+              |
+              <a href="#">Logística</a>
+              |
+              <a href="#">Fale Conosco</a>
+            </p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="footer-links">
+              <a href="https://www.fcebook.com.br" class="button" role="button" aria-pressed="true"><img src="face.png"
+                  alt="" width=40 height=40>
+              </a>
+              <a href="https://instagram.com" class="button" role="button" aria-pressed="true"><img src="insta.png"
+                  alt="" width=40 height=40>
+              </a>
+              <a href="https://linkedin.com.br" class="button" role="button" aria-pressed="true"><img src="linked.png"
+                  alt="" width=40 height=40>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://breakingwaste.com/"> BreakingWaste.com</a>
-    </div>
-    <!-- Copyright -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://breakingwaste.com/"> BreakingWaste.com</a>
+      </div>
+      <!-- Copyright -->
 
-</footer>
+  </footer>
   <!--JQuery, JS e Popper.Js-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -188,6 +215,6 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
 </body>
-  
+
 
 </html>
