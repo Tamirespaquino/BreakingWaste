@@ -27,13 +27,13 @@ p, li{
 
 /* Barra de navegação */
 
-
 header {
   margin-bottom: 40px;
 }
 
 header, .navbar {
   background: #292E33;
+  box-shadow: 0 2px 5px 0;
 }
 
 #nav-container{
