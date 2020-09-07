@@ -218,11 +218,7 @@ footer h2 {
   }
 }
 
-@media only screen and (max-width: 991px) {
-    .mainconteudo {
-       display: flex;
-       flex-direction: column;
-    }
+@media (max-width: 767px) {
     .chamada-sobre {
         text-align: center;
         font-size: 30px
@@ -236,9 +232,23 @@ footer h2 {
         
     }
 
-    .imagem-sobre {
-        width: 60%;
-        height: 60%;
-    }
+   
 
 }
+
+
+@media (max-width: 767px) {
+    .imagem-sobre {
+      width: 300px;
+    }
+    .mainconteudo {
+        display: flex;
+        flex-direction: column;
+     }
+}
+
+  @media (max-width: 576px) {
+    .imagem-sobre {
+        width: 60vw;
+      }
+  }

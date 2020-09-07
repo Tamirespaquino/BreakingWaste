@@ -66,8 +66,15 @@ header, .navbar {
 }
 
 /* body home */
+    .main-home-conteudo{
+        display: flex;
+        align-items: flex-start;
+    }
 
- 
+    .img1 {
+        width: 45vw;
+    }
+
   .titulo {
       font-size: 2.5em;
       font-weight: 700;
@@ -86,10 +93,8 @@ header, .navbar {
     font-weight: 600;
   }
 
-  .img1 {
-      margin-top: 10px;
-    width: 650px;
-  }
+
+  
 
   /* body cadastro */
   .cadastro {
@@ -200,11 +205,49 @@ header, .navbar {
       }
   }
   
-  @media only screen and (max-width: 991px) {
+  @media (max-width: 991px) {
+    .main-home-conteudo {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .img1 {
-        display: none;
+        margin-bottom: 50px;
+        width: 550px;
+    }
+    .titulo {
+        font-size: 2em;
+        font-weight: 700;
+  
+    }
+  
+    .subtitulo {
+        color: #292E33;
+        font-size: 1em;
+        font-weight: 600;
+    }
+  
+    .chamadaform {
+      color: #14B241;
+      font-size: 1em;
+      font-weight: 600;
     }
 
+    header {
+        margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .img1 {
+      width: 470px;
+    }
+}
+
+  @media (max-width: 576px) {
+      .img1 {
+        width: 80vw;
+      }
+  }
 
 /* configurações api do google */ 
 
