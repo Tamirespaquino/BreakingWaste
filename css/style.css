@@ -68,7 +68,7 @@ header, .navbar {
 
 /* HERO */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/pexels-rodolfo-clix-1366944.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/img/pexels-rodolfo-clix-1366944.png');
     background-size: cover;
     min-height: 80vh;
     color: white;
