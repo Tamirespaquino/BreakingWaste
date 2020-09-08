@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="./css/perfil.css" media="screen">
 
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/d8e00ce646.js" crossorigin="anonymous"></script>
@@ -58,6 +59,148 @@
       <div class="nav-faixa"></div>
     </nav>
   </header>
+
+  
+<div class="container emp-profile">
+  <form method="post">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="profile-img">
+                  <img src="./img/seu_madruga_feliz.jpg" alt=""/>
+                  <div class="file btn btn-lg btn-primary">
+                      Sua foto aqui
+                      <input type="file" name="file"/>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="profile-head">
+                          <h5>
+                              Nome Completo
+                          </h5>
+                          <h6>
+                              Profissão
+                          </h6>
+                          <br>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Sobre</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Pedidos</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Editar Perfil"/>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="profile-work">
+                  <p>EMPRESA</p>
+                  <a href="">Nome</a><br/>
+                  <a href="">Endereço</a><br/>
+                  <a href="">Setor</a>
+                  <p>Mais pesquisados</p>
+                  <a href="">Tipo de resíduo</a><br/>
+                  <a href="">Tipo de resíduo</a><br/>
+                  <a href="">Tipo de resíduo</a><br/>
+                  <a href="">Tipo de resíduo</a><br/>
+                </div>
+          </div>
+          <div class="col-md-8">
+              <div class="tab-content profile-tab" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>ID do usuário</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>ID_usuario</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Nome</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Nome do usuário</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>E-mail</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>E-mail do usuário</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Telefone</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>123 456 7890</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Profissão</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Profissão do usuário</p>
+                                  </div>
+                              </div>
+                  </div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Tipo de resíduo</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Clorofórmio</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Endereço</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Endereço frequentemente cotado</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Empresa parceira</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Empresa de descarte mais cotada</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Transportadora</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Sim ou não</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label>Quantidade</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <p>Quantidade de resíduo geralmente descartado</p>
+                                  </div>
+                              </div>
+                      </div>
+              </div>
+          </div>
+      </div>
+  </form>           
+</div>
 
   
   <!--Footer-->
