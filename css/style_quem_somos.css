@@ -69,11 +69,13 @@ header, .navbar {
 /* body quem somos */
 
     .mainconteudo {
-        padding-top: 20px;
         display: flex;
         align-items: center;
         padding-bottom: 50px;
+        
     }
+
+    
 
     .chamada-sobre {
         font-weight: 600;
@@ -111,6 +113,43 @@ header, .navbar {
     .item-cf {
         margin-bottom: 50px;
     }
+
+    /* porque existimos  */
+
+    .why-conteudo {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .img-fluid {
+        width: 80%;
+    }
+
+    /* como funciona  */
+
+    .how-works {
+        padding: 30px;
+    }
+
+    /* converse  */
+
+    .converse-conteudo {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .imagem-converse {
+       width: 50%; 
+    }
+
+    .img-converse {
+        display: flex;
+    justify-content: center;
+    }
+
+
 
 
  /* footer */
@@ -248,3 +287,42 @@ footer h2 {
         width: 60vw;
       }
   }
+
+  @media (max-width: 767px) {
+    .imagem-porque {
+      width: 300px;
+    }
+    .mainconteudo {
+        display: flex;
+        flex-direction: column;
+     }
+}
+
+  @media (max-width: 576px) {
+    .imagem-porque {
+        width: 60vw;
+      }
+  }
+
+  @media (max-width: 767px) {
+    .why-conteudo {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .img-why {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .imagem-porque {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .imagem-converse {
+        width: 50%;
+        margin-bottom: 30px;
+     }
+}
