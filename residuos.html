@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/d8e00ce646.js" crossorigin="anonymous"></script>
 
@@ -64,6 +65,13 @@
     <h1>Conheça os tipos de resíduos aceitos <br> por nossos parceiros</h1>
   </section>
 
+  <!-- AOS ANIMATION  -->
+  <script type="text/javascript">
+    AOS.init({
+        duration: 2500,
+    });
+  </script>
+
   <!-- ghs info -->
   <br></br>
   <div id="about-area">
@@ -79,27 +87,44 @@
             saúde e ao meio ambiente.
           </p>
         </div>
+        
         <div class="col-md-6">
-          <img class="img-fluid fabrica-ghs" src="img/SVG/fabrica-ghs.svg" alt="agencia hdc">
+          <div data-aos="flip-down">
+            <img class="img-fluid fabrica-ghs" src="img/SVG/fabrica-ghs.svg" alt="agencia hdc">
+          </div>  
         </div>
         <div class="ghs-p2 col-md-6">
-          <p>Segundo a <strong>ANVISA</strong>, esses materiais contêm substâncias químicas que conferem risco à saúde
-            pública
-            ou ao meio ambiente dependendo de suas características de inflamabilidade, corrosividade, reatividade e
-            toxicidade e, portanto
-            devem ser separados em:</p>
+          <div data-aos="flip-down">
+            <p>Segundo a <strong>ANVISA</strong>, esses materiais contêm substâncias químicas que conferem risco à saúde
+              pública
+              ou ao meio ambiente dependendo de suas características de inflamabilidade, corrosividade, reatividade e
+              toxicidade e, portanto
+              devem ser separados em:
+            </p>
+          </div>
           <ul id="about-list">
-            <li><i class="fas fa-check"></i><strong>Bombonas plásticas e separadas por tipo de material:</strong> ácidos
-              e bases fortes e fracos, metais pesados,
-              manganês, solventes orgâncios, entre outros;</li><br>
-            <li><i class="fas fa-check"></i><strong>Galões de vidro:</strong> compostos clorocarbonados, como
-              tetracloreto de carbono, mercúrio e qualquer composto
-              que reaja com policarbonato;</li><br>
-            <li><i class="fas fa-check"></i><strong>Frascos de policarbonato de até 2kg:</strong> padrões sólidos de
-              alta pureza;</li><br>
-            <li><i class="fas fa-check"></i><strong>Bombonas plásticas com reagente encapsulado em frascos de vidro
-                unitário:</strong> ácido tioglicólico, cianeto e
-              demais gases tóxicos altamente voláteis.</li>
+            <div data-aos="flip-down">
+              <li><i class="fas fa-check"></i><strong>Bombonas plásticas e separadas por tipo de material:</strong> ácidos
+                e bases fortes e fracos, metais pesados,
+                manganês, solventes orgâncios, entre outros;
+              </li><br>
+            </div>
+            <div data-aos="flip-down">
+              <li><i class="fas fa-check"></i><strong>Galões de vidro:</strong> compostos clorocarbonados, como
+                tetracloreto de carbono, mercúrio e qualquer composto
+                que reaja com policarbonato;
+              </li><br>
+            </div>
+            <div data-aos="flip-down">
+              <li><i class="fas fa-check"></i><strong>Frascos de policarbonato de até 2kg:</strong> padrões sólidos de
+                alta pureza;
+              </li><br>
+            </div>
+            <div data-aos="flip-down"> 
+              <li><i class="fas fa-check"></i><strong>Bombonas plásticas com reagente encapsulado em frascos de vidro
+                  unitário:</strong> ácido tioglicólico, cianeto e
+                demais gases tóxicos altamente voláteis.</li>
+              </div>  
           </ul>
         </div>
       </div>
@@ -113,7 +138,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h3 class="main-title-ghs">PERIGO</h3>
+          <div data-aos="zoom-in">
+            <h3 class="main-title-ghs">PERIGO</h3>
+          </div>
           <h4 class="sub-title">Globally Harmonized System (Classes de perigo do GHS)</h4>
         </div>
         <div class="col-md-4 service-box">

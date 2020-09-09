@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/d8e00ce646.js" crossorigin="anonymous"></script>
@@ -59,15 +61,29 @@
     </nav>
   </header>
   
+  <!-- AOS ANIMATION  -->
+  <script type="text/javascript">
+    AOS.init({
+        duration: 800,
+    });
+  </script>
 
   <!--Container central-->
   <div class="main-home-conteudo container">
       <div class="col-sm-12 col-md-12 col-lg-6">
         <form action="./action_page.php">
-          <h1 class="titulo text-success">Cotação de coleta ideal para sua empresa!
-          </h1>
-          <h3 class="subtitulo text-secondary">A sua experiência em
-            descarte de resíduos químicos mais rápida e descomplicada</h3>
+          <div data-aos="fade-up">
+            <h1 class="titulo text-success">
+              Cotação de coleta ideal para sua empresa!
+            </h1>
+          </div> 
+
+          <div data-aos="fade-down">
+            <h3 class="subtitulo text-secondary">A sua experiência em
+              descarte de resíduos químicos mais rápida e descomplicada
+            </h3>
+          </div>
+
             <br>
             <h4 class="chamadaform">Faça sua cotação gratuitamente:</h4>
           <div class="form-group">

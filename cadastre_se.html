@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
- 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/d8e00ce646.js" crossorigin="anonymous"></script>
 
@@ -63,9 +64,19 @@
 
   <div class="main-ilustracao container">
     <img class="img-fale-conosco" src="img/SVG/pc cadastro.svg" alt="cadastro">
-  <div class="fale-conosco-form container">
-    <h2 class="titulo text-center text-success">Cadastre sua empresa</h2>
-  </div>
+  
+    <div data-aos="zoom-in">
+      <div class="fale-conosco-form container">
+        <h2 class="titulo text-center text-success">Cadastre sua empresa</h2>
+      </div>
+    </div>
+
+    <!-- AOS ANIMATION  -->
+    <script type="text/javascript">
+      AOS.init({
+          duration: 1200,
+      });
+    </script>
 
   <main>
 
