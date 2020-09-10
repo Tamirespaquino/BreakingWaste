@@ -17,56 +17,246 @@ ul {
 .row {
     margin: 0;
 }
-/* Barra de navegação */
 
-.nav-item{
-    font-size: 14px;
-}
+/* GERAIS */
 
-header {
-  box-shadow: 0 2px 5px 0;
+/* *********************************************  */
+
+/* NAVBAR  */
   
-}
-
-header, .navbar {
-  background: #292E33;
+  /* .logo {
+    width: 100%;
+  } */
   
-}
-
-#nav-container{
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#logo {
+  img {
     width: 200px;
-}
+    height: auto;
+  }
 
-.navbar-brand {
-    margin: 0;
-    padding: 0;
-}
+  input.caixa-rastreio {
+      margin: 0;
+  }
 
-.navbar-brand:hover {
-    color: black;
-}
+  .nav-item {
+    margin-right: 10px;
+  }
 
-#navbar-links a {
-    font-weight: 600;
+  .navbar-dark .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1em;
     color: white;
 }
 
-#navbar-links a:hover {
+/* .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #14B241;
+    font-weight: 600;
+
+} */
+
+.navbar-dark .navbar-nav .nav-link:hover {
     color: #14B241;
 }
+/* NAVBAR  */
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding: 1em .8em;
+/* *********************************************  */
+
+/* CONTEUDO PRINCIPAL DA HOME */
+
+.main-home-conteudo{
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
 }
 
-/* body home */
+.subtitulo {
+    color: #292E33;
+    font-size: 1.2em;
+    font-weight: 600;
+}
 
-/* HERO */
+.chamadaform {
+  color: #14B241;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.titulo {
+    font-size: 2.5em;
+    font-weight: 700;
+
+}
+
+.img1 {
+    width: 45vw;
+}
+
+/* CONTEUDO PRINCIPAL DA HOME */
+
+/* *********************************************  */
+
+/* PAGINA PERFIL USUARIO  */
+
+.user-photo {
+    width: 100px;
+    height: 100px;
+    color: #FFF;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.user-area {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.edit {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.user-id {
+    margin-left: 10px;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ramo-name {
+    font-size: 16px;
+}
+
+.profile-work1 {
+    display: flex;
+    margin-top: 20px;
+}
+.profile-work1 p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    padding: 0;
+    margin: 0; 
+}
+.profile-work1 a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work1 ul{
+    list-style: none;
+}
+
+.pesquisados {
+    margin-left: 50px;
+}
+
+ .profile-head .nav-tabs .nav-link.active a{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+
+#myTabContent {
+    border-bottom: 1px solid rgba(207, 207, 207, 0.5);
+    border-left: 1px solid rgba(207, 207, 207, 0.5);
+    border-right: 1px solid rgba(207, 207, 207, 0.5);
+    padding-top: 20px;
+    background-color: #fff;
+    
+}
+
+.segunda-secao {
+    margin-bottom: 30px;
+}
+
+/* PAGINA PERFIL USUARIO  */
+
+/* *********************************************  */
+
+/* PAGINA CADASTRE-SE CONTEUDO */
+
+  .cadastro {
+    margin: 0 auto;
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+/* PAGINA CADASTRE-SE CONTEUDO */
+
+/* *********************************************  */
+
+/* PAGINA ENTRE CONTEUDO PRINCIPAL */
+
+.entrar{
+    
+    color: green;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .btn-entrar {
+    margin-bottom: 10px;
+  }
+
+  .logo-entre {
+      border-radius: 4px;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 20px;
+  }
+
+  .titulo-entre {
+      font-weight: 600;
+  }
+
+/* PAGINA ENTRE CONTEUDO PRINCIPAL */
+
+/* *********************************************  */
+
+/* PAGINA RESIDUOS HERO */
+
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/pexels-rodolfo-clix-1366944.png");
     background-size: cover;
@@ -101,8 +291,25 @@ header, .navbar {
     
 }
 
-    /* ghs info  */
+ul#about-list li i.fas {
+    color: #14B241;
+    margin-right: 10px;
+}
 
+/* PAGINA RESIDUOS HERO */
+
+/* *********************************************  */
+
+/* PAGINA RESIDUOS GHS INFORMAÇÕES  */
+
+    .main-title-ghs {
+        color: red;
+        margin: 0 0 10px 0;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+
+    }
 
     .ghs-p2 {
         margin-top: 30px;
@@ -134,73 +341,11 @@ header, .navbar {
 
     }
 
-     
-     .about-title {
-        font-size: 17px;
-        color: #444;
-        text-transform: uppercase;
-        font-weight: bold;
-     }
-     
-     #about-list {
-        list-style: none;
-        padding-left: 0;
-     }
-     
-     #about-list li {
-        line-height: 30px;
-     }
-     
-     #about-list i {
-        color: #14B241;
-        margin-right: 15px;
-     }
-     
+/* PAGINA RESIDUOS GHS INFORMAÇÕES  */
 
+/* *********************************************  */
 
-    .main-home-conteudo{
-        margin-top: 60px;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .img1 {
-        width: 45vw;
-    }
-
-  .titulo {
-      font-size: 2.5em;
-      font-weight: 700;
-
-  }
-
-  .subtitulo {
-      color: #292E33;
-      font-size: 1.2em;
-      font-weight: 600;
-  }
-
-  .chamadaform {
-    color: #14B241;
-    font-size: 1.2em;
-    font-weight: 600;
-  }
-
-  /* serviços  */
-
-  #service-area {
-    
-  }
-
-  .main-title-ghs {
-    color: red;
-    margin: 0 0 10px 0;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-
-  }
-
+/* PAGINA RESIDUOS ITENS QUIMICOS  */
 
   .sub-title {
       font-weight: 600;
@@ -235,16 +380,17 @@ header, .navbar {
     color: red;
  }
 
-  /* botoes falne conosco  */
+
+/* PAGINA RESIDUOS ITENS QUIMICOS  */
+
+/* *********************************************  */
+
+/* PAGINA DE CONTATO BOTOES FALE CONOSCO  */
   
     .enviar-email {
     margin-bottom: 10px;
 }
 
-
-
-
-  /* imagem do fale conosco */
   .img-fale-conosco {
     margin: 10px auto;
     display: flex;
@@ -252,23 +398,137 @@ header, .navbar {
     height: 200px;
 }
 
-    /* footer */
+/* PAGINA DE CONTATO BOTOES FALE CONOSCO  */
+
+/* *********************************************  */
+
+/* PAGINA QUEM SOMOS CONTEUDO */
+
+.img-sobre {
+    display: flex;
+    justify-content: center;
+}
+
+.mainconteudo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+    
+}
+
+ul#about-list {
+    padding-left: 0;
+}
+
+.box-chamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chamada-sobre {
+    font-weight: 600;
+    color: #14B241;
+}
+
+
+.segundo-conteudo {
+    padding: 20px;
+    /* background-color: #292E33; */
+}
+
+.chamada {
+    font-size: 40px;
+    font-weight: 600;
+    color: #14B241;
+}
+
+hr {
+    left: 0;
+    border: 2px solid #14B241;
+    width: 100px;
+}
+
+.segundo-conteudo-paragrafo {
+    color: #292E33;
+}
+
+.item-cf i.fas {
+    color: #14B241;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.item-cf {
+    margin-bottom: 50px;
+}
+
+/* porque existimos  */
+
+.why-conteudo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.img-fluid {
+    width: 80%;
+}
+
+/* como funciona  */
+
+.how-works {
+    padding: 30px;
+}
+
+/* converse  */
+
+.converse-conteudo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.imagem-converse {
+   width: 50%; 
+}
+
+.img-converse {
+    display: flex;
+justify-content: center;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PAGINA QUEM SOMOS CONTEUDO */
+
+/* *********************************************  */
+
+/* FOOTER */
+
     footer .container{
         display: flex;
         flex-wrap: wrap;
     }
+
     .segmento1 h2{
         font-weight: 700;
         color: #14b241;
     }
+
     footer p {
       font-size: 14px;
       color: white;
       line-height: 25px;
     }
+
     footer h2, h3 {
       color: white;
     }
+
     footer h2 {
         font-size: 18px;
     }
@@ -326,11 +586,10 @@ header, .navbar {
           padding-right: 10px;
       } 
   
-      
-  
       .form-control{
           margin-bottom: 5px;
       }
+
       .footer-bottom-text {
           text-align: center;
           background-color: #14b241;
@@ -338,7 +597,12 @@ header, .navbar {
       }
   
 
-  /* MEDIA QUERIES */
+/* FOOTER  */
+
+/* *********************************************  */
+
+/* MEDIA QUERIES */
+
   @media only screen and (min-width: 768px) and (max-width: 991px) {
       .md-mb-30{
           margin-bottom: 30px;
@@ -381,7 +645,7 @@ header, .navbar {
     }
 
     header {
-        margin-bottom: 50px;
+        margin-bottom: 0px;
     }
   }
 
@@ -396,6 +660,77 @@ header, .navbar {
         width: 80vw;
       }
   }
+  
+  
+@media (max-width: 900px) {
+
+    .mainconteudo {
+        display: flex;
+        flex-direction: column;
+     }
+}
+
+@media (max-width: 767px) {
+
+    .chamada-sobre {
+        font-size: 2em;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .sub-chamada-sobre {
+       text-align: center;
+   }
+}
+
+  @media (max-width: 576px) {
+    .imagem-sobre {
+        width: 60vw;
+      }
+  }
+
+  @media (max-width: 767px) {
+    .imagem-porque {
+      width: 300px;
+    }
+    .mainconteudo {
+        display: flex;
+        flex-direction: column;
+     }
+}
+
+  @media (max-width: 576px) {
+    .imagem-porque {
+        width: 60vw;
+      }
+  }
+
+  @media (max-width: 767px) {
+    .why-conteudo {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .img-why {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .imagem-porque {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .imagem-converse {
+        width: 50%;
+        margin-bottom: 30px;
+     }
+}
+
+/* MEDIA QUERIES */
+
+/* *********************************************  */
 
 /* configurações api do google */ 
 

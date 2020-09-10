@@ -74,13 +74,11 @@ header, .navbar {
     height: 200px;
 }
 
-    .titulo {
-        font-weight: 700;
-        font-size: 2.5em;
-        padding: 0;
-        margin: 0;
-        text-transform: uppercase;
-    }
+
+
+.titulo-cadastro {
+    font-weight: 700;
+}
 
     /* footer */
     footer .container{

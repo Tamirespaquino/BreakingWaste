@@ -68,6 +68,8 @@ header, .navbar {
 
 /* body quem somos */
 
+  
+
     .mainconteudo {
         display: flex;
         align-items: center;
@@ -106,7 +108,7 @@ header, .navbar {
 
     i.fas {
         color: #14B241;
-        font-size: 60px;
+        font-size: 30px;
         margin-bottom: 30px;
     }
 
@@ -147,6 +149,11 @@ header, .navbar {
     .img-converse {
         display: flex;
     justify-content: center;
+    }
+
+    .btn a {
+        color: white;
+        text-decoration: none;
     }
 
 

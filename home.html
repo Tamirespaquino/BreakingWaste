@@ -12,12 +12,36 @@
   <!-- Bootstrap e CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
+  
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/d8e00ce646.js" crossorigin="anonymous"></script>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
  
   
 
@@ -27,40 +51,36 @@
 <body>
   <!--Navbar-->
   <header>
-    <nav class="container navbar navbar-expand-lg nav-container navbar-dark">
-      <a href="#" class="navbar-brand">
-        <img id="logo" src="./img/logo desktop.png" alt="BreakingWaste" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
-        aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img src="img/logo desktop.png" alt="" srcset=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class=" nav-item nav-link" id="home-menu" href="home.html">Home<span class="sr-only"></span></a>
+            <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-item nav-link" id="about-menu" href="quem_somos.html">Quem Somos</a>
+          <li class="nav-item">
+            <a class="nav-link" href="quem_somos.html">Quem somos</a>
           </li>
-                    <li class="nav-item active">
-            <a class="nav-link nav-item" id="signup-menu" href="cadastre_se.html">Cadastre-se</a>
+          <li class="nav-item">
+            <a class="nav-link" href="residuos.html">Resíduos</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link nav-item" id="login-menu" href="residuos.html">Resíduos</a>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link nav-item" id="login-menu" href="entre.html">Entre</a>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastre_se.html">Cadastre-se</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link nav-item" id="howworks-menu" href="contato.html">Contato</a>
+          <li class="nav-item">
+            <a class="nav-link" href="entre.html">Entre</a>
           </li>
         </ul>
       </div>
-      <div class="nav-faixa"></div>
     </nav>
   </header>
-  
+
   <!-- AOS ANIMATION  -->
   <script type="text/javascript">
     AOS.init({
