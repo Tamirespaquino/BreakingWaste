@@ -23,7 +23,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/dist/css/bootstrap.min.css" type = "text/css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -59,7 +59,7 @@
         console.log(error)
       
       })
-      const watcher = navigtor.geolocation.watchPosition(function(position){ //checa localização do user de tempos em tempos
+      const watcher = navigator.geolocation.watchPosition(function(position){ //checa localização do user de tempos em tempos
         console.log(position)
       }, function(error){ //verificando possíveis erros na localização
         console.log(error) 
