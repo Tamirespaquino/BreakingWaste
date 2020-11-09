@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  
   <!--Tipografia-->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -49,6 +50,27 @@
 </head>
 
 <body>
+  <script>
+    if('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(function(position){ //checa a localização atual do user
+        
+        console.log(position)
+      }, function(erros){
+        console.log(error)
+      
+      })
+      const watcher = navigtor.geolocation.watchPosition(function(position){ //checa localização do user de tempos em tempos
+        console.log(position)
+      }, function(error){ //verificando possíveis erros na localização
+        console.log(error) 
+      },{enableHighAccuracy: true, maximumAge: 30000, timeout: 3000}, //passamos um objeto
+        navigator.geolocation.clearWatch(watcher) //limpa o watcher de tempos em tempos
+      )     
+    }else{
+      alert('ops, não foi possível pegar a localização')
+    }
+
+  </script>
   <!--Navbar-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
