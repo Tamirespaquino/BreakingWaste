@@ -52,14 +52,7 @@
 <body>
   <script>
     if('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(function(position){ //checa a localização atual do user
-        
-        console.log(position)
-      }, function(erros){
-        console.log(error)
-      
-      })
-      const watcher = navigator.geolocation.watchPosition(function(position){ //checa localização do user de tempos em tempos
+        const watcher = navigator.geolocation.watchPosition(function(position){ //checa localização do user de tempos em tempos
         console.log(position)
       }, function(error){ //verificando possíveis erros na localização
         console.log(error) 
