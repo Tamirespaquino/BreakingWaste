@@ -498,6 +498,10 @@ justify-content: center;
 
 /* FOOTER */
 
+    footer{
+       position: relative;
+        
+    }
     footer .container{
         display: flex;
         flex-wrap: wrap;
