@@ -11,12 +11,102 @@
 <body>
     <main class="main-container">
         <section class="section">
+			<h2 class="text-center">Products</h2>
             <div class="products">
                 <!--
 					https://www.iconfinder.com/iconsets/beverage
 					Creative Commons (Attribution 3.0 Unported)
 					https://creativemarket.com/eucalyp
 				-->
+
+				<div id="formulario" class="product">
+					<div class="form-group">
+					  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de resíduo</label>
+					  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+						<option value="0" selected desabled>Selecione</option>
+						<option value="1">Solventes clorados</option>
+						<option value="2">Solventes não clorados</option>
+						<option value="3">Metais pesados em solução</option>
+						<option value="4">Metais pesados em estado sólido</option>
+						<option value="5">Ácidos</option>
+						<option value="6">Bases</option>
+						<option value="7">Aminas</option>
+						<option value="8">Cianetos</option>
+						<option value="9">Fenois</option>
+						<option value="10">Pesticidas</option>
+						<option value="11">Outros</option>
+					  </select>
+					</div>
+					<div class="form-group" class="product">
+					  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tamanho das bombonas</label>
+					  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+						<option selected disabled>Selecione</option>
+						<option value="1">10 litros</option>
+						<option value="2">20 litros</option>
+						<option value="3">30 litros</option>
+						<option value="4">40 litros</option>
+						<option value="5">50 litros</option>
+						<option value="6">60 litros</option>
+						<option value="7">70 litros</option>
+						<option value="8">80 litros</option>
+						<option value="9">90 litros</option>
+						<option value="10">100 litros</option>
+						<option value="11">110 litros</option>
+						<option value="12">120 litros</option>
+						<option value="13">130 litros</option>
+						<option value="14">140 litros</option>
+						<option value="15">150 litros</option>
+						<option value="16">160 litros</option>
+						<option value="17">170 litros</option>
+						<option value="18">180 litros</option>
+						<option value="19">190 litros</option>
+						<option value="20">200 litros</option>
+						<option value="21">Outro</option>
+					  </select>
+					</div>
+				  <div class="form-group" class="product">
+					<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
+					<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+					  <option selected disabled>Selecione</option>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					  <option value="6">6</option>
+					  <option value="7">7</option>
+					  <option value="8">8</option>
+					  <option value="9">9</option>
+					  <option value="10">10</option>
+					  <option value="11">11</option>
+					  <option value="12">12</option>
+					  <option value="13">13</option>
+					  <option value="14">14</option>
+					  <option value="15">15</option>
+					  <option value="16">16</option>
+					  <option value="17">17</option>
+					  <option value="18">18</option>
+					  <option value="19">19</option>
+					  <option value="20">20</option>
+					  <option value="21">Outro</option>
+					</select>
+				  </div>
+				  <div class="form-group" class="product">
+					<label for="inputCEP">CEP de Retirada</label>
+					<input type="text" class="form-control" id="inputCEP">
+				  </div>
+				</div>
+				  <button type="button" class="btn btn-success">Descartar</button>
+				  <button type="button" id="adicionar" onclick ="myfunction()" class="btn btn-success">Adicionar formulário</button>
+				  <br>
+				  <br>
+			  </div>
+			  <div class="imglogistica container col-lg-6">
+				  <img class="img1" src="/public/img/Asset 1_1.svg" alt="Logística"  />
+			  </div>
+		  </div>
+		
+		  <!--
 				<div class="product">
 					<img class="product__image" src="img/products/beer.svg" alt="Beer">
 					<h2 class="product__name">Beer</h2>
@@ -53,9 +143,9 @@
 					<h3 class="product__price">6.00</h3>
 					<button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
 				</div>
-
+			-->
             </div>
-
+		
         </section>
 
         <section class="section">

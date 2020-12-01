@@ -152,7 +152,7 @@ button {
     border-style: solid;
 }
 
-.product__price::before {
+.product__price:before {
     content: '$';
 }
 

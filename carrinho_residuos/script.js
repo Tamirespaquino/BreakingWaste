@@ -47,6 +47,8 @@ addToCartButtonsDOM.forEach(addToCartButtonDOM => {
 });
 
 //Function to insert item to DOM
+
+//MUDAR AQUI PRA FICAR UMA LISTA
 function insertItemToDOM(product) {
     cartDOM.insertAdjacentHTML(
         'beforeend',
