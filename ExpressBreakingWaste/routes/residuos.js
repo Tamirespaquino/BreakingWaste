@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var Residuos_Controller = require('..controllers/Residuos_Controller');
 
-/* GET home page. */
-router.get('/residuos', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-module.exports = router;
+  
+module.exports = router

@@ -1,13 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var Contato_Controller = require('..controllers/Contato_Controller');
+ 
+router.get('/contato', Contato_Controller.contato);
+router.post('/contato', Contato_Controller.enviarMensagem);
 
-/* GET home page. */
-router.get('/contato', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-router.post('/contato', function(req, res, next) {
-    res.render('index', { title: 'Express' });
-  });
-
-module.exports = router;
+module.exports = router

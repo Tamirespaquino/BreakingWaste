@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!--Meta tags exigidas-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <!--Tipografia-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap e CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href=".public/css/style.css" media="screen">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/d8e00ce646.js" crossorigin="anonymous"></script>
+
+
+
+  <title>Breaking Waste</title>
+</head>
+
+<body>
+  <!--Navbar-->
+  <%- include('../partials/header')%>
+
+
+
+  <main class="main-container">
+    <section class="section">
+        <h2 class="text-center">Products</h2>
+        <div class="products">
+            <!--
+                https://www.iconfinder.com/iconsets/beverage
+                Creative Commons (Attribution 3.0 Unported)
+                https://creativemarket.com/eucalyp
+            -->
+
+            <div id="formulario" class="product">
+                <div class="form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de resíduo</label>
+                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <option value="0" selected desabled>Selecione</option>
+                    <option value="1">Solventes clorados</option>
+                    <option value="2">Solventes não clorados</option>
+                    <option value="3">Metais pesados em solução</option>
+                    <option value="4">Metais pesados em estado sólido</option>
+                    <option value="5">Ácidos</option>
+                    <option value="6">Bases</option>
+                    <option value="7">Aminas</option>
+                    <option value="8">Cianetos</option>
+                    <option value="9">Fenois</option>
+                    <option value="10">Pesticidas</option>
+                    <option value="11">Outros</option>
+                  </select>
+                </div>
+                <div class="form-group" class="product">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tamanho das bombonas</label>
+                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <option selected disabled>Selecione</option>
+                    <option value="1">10 litros</option>
+                    <option value="2">20 litros</option>
+                    <option value="3">30 litros</option>
+                    <option value="4">40 litros</option>
+                    <option value="5">50 litros</option>
+                    <option value="6">60 litros</option>
+                    <option value="7">70 litros</option>
+                    <option value="8">80 litros</option>
+                    <option value="9">90 litros</option>
+                    <option value="10">100 litros</option>
+                    <option value="11">110 litros</option>
+                    <option value="12">120 litros</option>
+                    <option value="13">130 litros</option>
+                    <option value="14">140 litros</option>
+                    <option value="15">150 litros</option>
+                    <option value="16">160 litros</option>
+                    <option value="17">170 litros</option>
+                    <option value="18">180 litros</option>
+                    <option value="19">190 litros</option>
+                    <option value="20">200 litros</option>
+                    <option value="21">Outro</option>
+                  </select>
+                </div>
+              <div class="form-group" class="product">
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                  <option selected disabled>Selecione</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">Outro</option>
+                </select>
+              </div>
+              <div class="form-group" class="product">
+                <label for="inputCEP">CEP de Retirada</label>
+                <input type="text" class="form-control" id="inputCEP">
+              </div>
+            </div>
+              <button type="button" class="btn btn-success">Descartar</button>
+              <button type="button" id="adicionar" onclick ="myfunction()" class="btn btn-success">Adicionar formulário</button>
+              <br>
+              <br>
+          </div>
+          <div class="imglogistica container col-lg-6">
+              <img class="img1" src="/public/img/Asset 1_1.svg" alt="Logística"  />
+          </div>
+      </div>
+    
+      <!--
+            <div class="product">
+                <img class="product__image" src="img/products/beer.svg" alt="Beer">
+                <h2 class="product__name">Beer</h2>
+                <h3 class="product__price">6.00</h3>
+                <button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img class="product__image" src="img/products/energy-drink.svg" alt="Energy Drink">
+                <h2 class="product__name">Energy Drink</h2>
+                <h3 class="product__price">5.00</h3>
+                <button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img class="product__image" src="img/products/juice.svg" alt="Juice">
+                <h2 class="product__name">Juice</h2>
+                <h3 class="product__price">4.00</h3>
+                <button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img class="product__image" src="img/products/milk.svg" alt="Milk">
+                <h2 class="product__name">Milk</h2>
+                <h3 class="product__price">2.50</h3>
+                <button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img class="product__image" src="img/products/mineral-water.svg" alt="Mineral Water">
+                <h2 class="product__name">Mineral Water</h2>
+                <h3 class="product__price">1.00</h3>
+                <button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+            <div class="product">
+                <img class="product__image" src="img/products/smoothie.svg" alt="Smoothie">
+                <h2 class="product__name">Smoothie</h2>
+                <h3 class="product__price">6.00</h3>
+                <button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
+            </div>
+        -->
+        </div>
+    
+    </section>
+
+    <section class="section">
+        <h2 class="text-center">Cart</h2>
+        <div class="cart"></div>
+    </section>
+
+</main>
+
+<script src="./script.js"></script>
+
+
+
+  <!--Footer-->
+  <%-include ('./partials/footer')%> 
+
+  <!--JQuery, JS e Popper.Js-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+

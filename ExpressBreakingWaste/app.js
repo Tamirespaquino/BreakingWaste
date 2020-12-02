@@ -1,13 +1,8 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const http = require("http");
+const express = require("express");
+const Cadastrese_Controller = require("./controllers/Cadastrese_Controller");
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-var app = express();
+http.createServer(express).listen(3000, () => console.log("Servidor rodando local na porta 3000"));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,5 +33,19 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.use()
+// rotas
+app.use('/cadastrese', cadastrese);
+app.use('/contato', contato);
+app.use('/entre', entre);
+app.use('/home', home);
+app.use('/perfilusuario', perfilusuario);
+app.use('/quemsomos', quemsomos);
+app.use('/residuos', residuos);
+app.use('/resultadobusca', resultadobusca);
+
+
+
 module.exports = app;
+
+
+

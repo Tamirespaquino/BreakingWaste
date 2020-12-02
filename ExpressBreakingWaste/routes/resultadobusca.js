@@ -1,7 +1,8 @@
-router.get('/resultadobusca', function(req, res, next) {
-    res.render('index', { title: 'Express' });
-  });
+var express = require('express');
+var router = express.Router();
+var Residuos_Controller = require('..controllers/Residuos_Controller');
+
+
+
   
-  router.post('/resultadobusca', function(req, res, next) {
-      res.render('index', { title: 'Express' });
-    });
+module.exports = router
