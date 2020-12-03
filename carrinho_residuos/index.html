@@ -21,8 +21,8 @@
 
 				<div id="formulario" class="product">
 					<div class="form-group">
-					  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de resíduo</label>
-					  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+					  <label class="my-1 mr-2 product__name" for="inlineFormCustomSelectPref">Tipo de resíduo</label>
+					  <select class="custom-select my-1 mr-sm-2 product__price" id="inlineFormCustomSelectPref">
 						<option value="0" selected desabled>Selecione</option>
 						<option value="1">Solventes clorados</option>
 						<option value="2">Solventes não clorados</option>
@@ -38,8 +38,8 @@
 					  </select>
 					</div>
 					<div class="form-group" class="product">
-					  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tamanho das bombonas</label>
-					  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+					  <label class="my-1 mr-2 product__name" for="inlineFormCustomSelectPref">Tamanho das bombonas</label>
+					  <select class="custom-select my-1 mr-sm-2 product__price id="inlineFormCustomSelectPref">
 						<option selected disabled>Selecione</option>
 						<option value="1">10 litros</option>
 						<option value="2">20 litros</option>
@@ -65,8 +65,8 @@
 					  </select>
 					</div>
 				  <div class="form-group" class="product">
-					<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
-					<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+					<label class="my-1 mr-2 product__name" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
+					<select class="custom-select my-1 mr-sm-2 product__price id="inlineFormCustomSelectPref">
 					  <option selected disabled>Selecione</option>
 					  <option value="1">1</option>
 					  <option value="2">2</option>
@@ -92,17 +92,17 @@
 					</select>
 				  </div>
 				  <div class="form-group" class="product">
-					<label for="inputCEP">CEP de Retirada</label>
-					<input type="text" class="form-control" id="inputCEP">
+					<label class="product__name" for="inputCEP">CEP de Retirada</label>
+					<input type="text" class="form-control product__price" id="inputCEP">
 				  </div>
 				</div>
-				  <button type="button" class="btn btn-success">Descartar</button>
-				  <button type="button" id="adicionar" onclick ="myfunction()" class="btn btn-success">Adicionar formulário</button>
+				  <!--<button type="button" id="adicionar" class="btn btn-primary" data-action="ADD_TO_CART">Descartar</button>-->
+				  <button type="button" id="adicionar" onclick ="increaseItem()" class="btn btn-primary" data-action="ADD_TO_CART">Adicionar formulário</button>
 				  <br>
 				  <br>
 			  </div>
 			  <div class="imglogistica container col-lg-6">
-				  <img class="img1" src="/public/img/Asset 1_1.svg" alt="Logística"  />
+				  <img class="product__image" src="/carrinho_residuos/img/products/beer.svg" alt="Logística"  />
 			  </div>
 		  </div>
 		
@@ -113,30 +113,7 @@
 					<h3 class="product__price">6.00</h3>
 					<button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
 				</div>
-				<div class="product">
-					<img class="product__image" src="img/products/energy-drink.svg" alt="Energy Drink">
-					<h2 class="product__name">Energy Drink</h2>
-					<h3 class="product__price">5.00</h3>
-					<button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
-				<div class="product">
-					<img class="product__image" src="img/products/juice.svg" alt="Juice">
-					<h2 class="product__name">Juice</h2>
-					<h3 class="product__price">4.00</h3>
-					<button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
-				<div class="product">
-					<img class="product__image" src="img/products/milk.svg" alt="Milk">
-					<h2 class="product__name">Milk</h2>
-					<h3 class="product__price">2.50</h3>
-					<button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
-				<div class="product">
-					<img class="product__image" src="img/products/mineral-water.svg" alt="Mineral Water">
-					<h2 class="product__name">Mineral Water</h2>
-					<h3 class="product__price">1.00</h3>
-					<button class="btn btn-primary" data-action="ADD_TO_CART">Add To Cart</button>
-				</div>
+				
 				<div class="product">
 					<img class="product__image" src="img/products/smoothie.svg" alt="Smoothie">
 					<h2 class="product__name">Smoothie</h2>

@@ -27,7 +27,7 @@ addToCartButtonsDOM.forEach(addToCartButtonDOM => {
     addToCartButtonDOM.addEventListener('click', () => {
         const productDOM = addToCartButtonDOM.parentNode;
         const product = {
-            image: productDOM.querySelector('.product__image').getAttribute('src'),
+            //image: productDOM.querySelector('.product__image').getAttribute('src'),
             name: productDOM.querySelector('.product__name').innerText,
             price: productDOM.querySelector('.product__price').innerText,
             quantity: 1
@@ -54,9 +54,15 @@ function insertItemToDOM(product) {
         'beforeend',
         `
     <div class="cart__item">
-      <img class="cart__item__image" src="${product.image}" alt="${product.name}" >
-      <h3 class="cart__item__name">${product.name}</h3>
-      <h3 class="cart__item__price">${product.price}</h3>
+        <div class="cart__item__image" alt="${product.name}">
+            <label class="cart__item__name">${product.name}</label>
+            <select class="cart__item__price">${product.price}</select>
+        </div>
+        <div class="cart__item">
+            <label></label>
+
+        </div>
+              
       <button class="btn btn-primary btn-small${product.quantity === 1 ? ' btn-danger' : ''}" data-action="DECREASE_ITEM">&minus;</button>
       <h3 class="cart__item__quantity">${product.quantity}</h3>
       <button class="btn btn-primary btn-small" data-action="INCREASE_ITEM">&plus;</button>
@@ -72,7 +78,7 @@ function insertItemToDOM(product) {
 //Function to Handle Buttons in the cart
 
 function handleActionButtons(addToCartButtonDOM, product){
-    addToCartButtonDOM.innerText = 'In Cart';
+    addToCartButtonDOM.innerText = 'Adicionado';
     addToCartButtonDOM.disabled = true;
 
     const cartItemsDOM = cartDOM.querySelectorAll('.cart__item');
@@ -87,9 +93,10 @@ function handleActionButtons(addToCartButtonDOM, product){
         }
     });
 }
+console.log(handleActionButtons);
 
 
-//Function to increase item in cart
+//Function to increase item in cart/adicionado
 function increaseItem(product, cartItemDOM) {
     cart.forEach(cartItem => {
         if(cartItem.name === product.name) {
@@ -100,7 +107,7 @@ function increaseItem(product, cartItemDOM) {
     });
 }
 
-//Function to decrease item in cart
+//Function to decrease item in cart/adicionado
 function decreaseItem(product, cartItemDOM, addToCartButtonsDOM) {
     cart.forEach(cartItem => {
         if(cartItem.name === product.name) {
@@ -123,7 +130,7 @@ function removeItem(product, cartItemDOM, addToCartButtonDOM) {
     setTimeout(() => cartItemDOM.remove(), 250);
     cart = cart.filter(cartItem => cartItem.name !== product.name);
     saveCart();
-    addToCartButtonDOM.innerText = 'Add To Cart';
+    addToCartButtonDOM.innerText = 'Adicionar formulário';
     addToCartButtonDOM.disabled = false;
 
     if (cart.length < 1) {
@@ -138,8 +145,8 @@ function addCartFooter() {
             'afterend',
             `
         <div class="cart-footer">
-            <button class="btn btn-danger" data-action="CLEAR_CART">Clear Cart</button>
-            <button class="btn btn-primary" data-action="CHECKOUT">Pay</button>
+            <button class="btn btn-danger" data-action="CLEAR_CART">Descartar</button>
+            <button class="btn btn-primary" data-action="CHECKOUT">Valor total</button>
         </div>
         `
         );
