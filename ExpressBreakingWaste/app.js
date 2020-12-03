@@ -1,8 +1,21 @@
 const http = require("http");
 const express = require("express");
 const Cadastrese_Controller = require("./controllers/Cadastrese_Controller");
+const path = require('path');
+const logger = require('morgan');
+const createError = require('http-errors');
+const cookieParser = require('cookie-parser');
+const perfilusuario = require('./routes/perfilusuario');
+const cadastrese = require('./routes/cadastrese');
+const contato = require('./routes/contato');
+const entre = require('./routes/entre');
+const home = require('./routes/home');
+const quemsomos = require('./routes/quemsomos');
+const residuos = require('./routes/residuos');
+const resultadobusca = require('./routes/resultadobusca');
 
-http.createServer(express).listen(3000, () => console.log("Servidor rodando local na porta 3000"));
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -14,8 +27,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// rotas
+app.use('/cadastrese', cadastrese);
+app.use('/contato', contato);
+app.use('/entre', entre);
+app.use('/', home);
+app.use('/perfilusuario', perfilusuario);
+app.use('/quemsomos', quemsomos);
+app.use('/residuos', residuos);
+app.use('/resultadobusca', resultadobusca);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -32,18 +52,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-// rotas
-app.use('/cadastrese', cadastrese);
-app.use('/contato', contato);
-app.use('/entre', entre);
-app.use('/home', home);
-app.use('/perfilusuario', perfilusuario);
-app.use('/quemsomos', quemsomos);
-app.use('/residuos', residuos);
-app.use('/resultadobusca', resultadobusca);
-
-
 
 module.exports = app;
 
