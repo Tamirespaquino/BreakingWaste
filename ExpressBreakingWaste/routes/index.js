@@ -1,4 +1,5 @@
 var express = require('express');
+const app = require('../app');
 var router = express.Router();
 // var cadastrese = require('./cadastrese');
 // var carrinho = require('./carrinho');

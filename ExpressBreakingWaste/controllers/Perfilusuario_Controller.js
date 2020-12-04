@@ -9,7 +9,7 @@ module.exports = {
     },
 
     visualizar: function(req, res, next) {
-        let empresa = empresas.find((empresa) => {
+        let empresa = empresas.findAll((empresa) => {
             empresas.id == id;
             res.render('/empresa/visualizar');
         });
@@ -17,7 +17,8 @@ module.exports = {
         res.redirect('/views/entre');
     },
 
-    editarUser: function(req, res, next) {
+
+    editar: function(req, res, next) {
         let empresa = empresas.find((empresa) => {
             empresas.id == id;
         })
