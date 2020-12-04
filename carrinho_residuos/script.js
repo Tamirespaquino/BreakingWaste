@@ -58,10 +58,11 @@ function insertItemToDOM(product) {
             <label class="cart__item__name">${product.name}</label>
             <select class="cart__item__price">${product.price}</select>
         </div>
-        <div class="cart__item">
-            <label></label>
-
-        </div>
+        <div>
+        <label class="cart__item__name">${product.name}</label>
+        <input type="text" class="form-control product__price" id="inputCEP">
+      </div>
+    </div>
               
       <button class="btn btn-primary btn-small${product.quantity === 1 ? ' btn-danger' : ''}" data-action="DECREASE_ITEM">&minus;</button>
       <h3 class="cart__item__quantity">${product.quantity}</h3>
@@ -84,15 +85,15 @@ function handleActionButtons(addToCartButtonDOM, product){
     const cartItemsDOM = cartDOM.querySelectorAll('.cart__item');
     cartItemsDOM.forEach(cartItemDOM => {
         if(cartItemDOM.querySelector('.cart__item__name').innerText === product.name) {
-            cartItemDOM.querySelector('[data-action = "INCREASE_ITEM"]').addEventListener('click', () => increaseItem(product, cartItemDOM));
-            cartItemDOM
-                        .querySelector('[data-action = "DRECREASE_ITEM"]')
-                        .addEventListener('click', () => decreaseItem(product, cartItemDOM, addToCartButtonDOM));
+         //   cartItemDOM.querySelector('[data-action = "INCREASE_ITEM"]').addEventListener('click', () => increaseItem(product, cartItemDOM));
+         //   cartItemDOM
+         //               .querySelector('[data-action = "DRECREASE_ITEM"]')
+         //               .addEventListener('click', () => decreaseItem(product, cartItemDOM, addToCartButtonDOM));
             cartItemDOM.querySelector('[data-action="REMOVE_ITEM"]').addEventListener('click', () => removeItem(product, cartItem, addToCartButtonDOM));
             
         }
     });
-}
+
 console.log(handleActionButtons);
 
 
@@ -137,6 +138,7 @@ function removeItem(product, cartItemDOM, addToCartButtonDOM) {
         document.querySelector('.cart-footer').remove();
     }
 }
+console.log(removeItem);
 
 //Function to add cart footer
 function addCartFooter() {
@@ -168,10 +170,12 @@ function clearCart() {
     document.querySelector('.cart-footer').remove();
 
     addToCartButtonsDOM.forEach(addToCartButtonDOM => {
-        addToCartButtonDOM.innerText = 'Add To Cart';
+        addToCartButtonDOM.innerText = 'Adicionar formulário';
         addToCartButtonDOM.disabled = false;
     });
 }
+console.log(clearCart);
+
 function checkout() {
         let paypalFormHTML = `
     <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -206,7 +210,7 @@ function countCartTotal() {
     document.querySelector('[data-action="CHECKOUT"]').innerText = `Pay $${cartTotal}`;
 }
 
-//Function to sabe cart on changes
+//Function to save cart on changes
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     countCartTotal();
