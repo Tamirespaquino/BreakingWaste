@@ -39,7 +39,19 @@
     <div class="row">
       <div class="col-md-2 col-sm-12 text-center">
         <h3 class="text-left text-success">Confira o resultado da pesquisa</h3>
-        <!-- CRIAR CARDS QUE VAO DENTRO DO FOR EACH - ARRAY DE BUSCAS-->
+        <!--MELHORAR ESSES CARDS AQUI E FAZER O dom PARA RETOMR O CÓDIGO LÁ EMABIXO-->
+         
+        <% result.forEach((campos) => { %>
+            <tr>
+                <td><%= campos.id %></td>
+                <td><%= campos.cep %></td>
+                <td><%= campos.tiporesiduos %></td>
+                <td><%= campos.tamanhobombonas %></td>
+                <td><%= campos.quantidadebombonas %></td>
+                <td><button>NOVA BUSCA</button></td>
+            </tr>            
+        <% }) %>
+      
       </div>
       <div class="col-md-10 col-sm-12 text-center">
         <style type="text/css">

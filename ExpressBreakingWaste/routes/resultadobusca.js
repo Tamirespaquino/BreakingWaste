@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Residuos_Controller = require('../controllers/Residuos_Controller');
+var Resultadobusca_Controller = require('../controllers/Resultadobusca_Controller');
 
-
-
+router.get('/resultadobusca', Resultadobusca_Controller.resultadobusca);
   
 module.exports = router
