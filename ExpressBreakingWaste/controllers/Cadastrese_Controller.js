@@ -25,7 +25,11 @@ module.exports = {
             cidade: req.body.cidade,
             estado: req.body.estado,
             cep: req.body.cep,
-            funcionamento: res.body.funcionamento
+            funcionamento: res.body.funcionamento,
+            tipousuario: req.body.tipousuario,
+            quantidadebombonas: req.body.quantidadebombonas,
+            tamanhobombonas: req.body.tamanhobombonas,
+            tiposresiduos: req.body.tiposresiduos,
         });
 
         let novo_json_empresas = JSON.stringify(empresas)
