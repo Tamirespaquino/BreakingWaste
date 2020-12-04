@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
 var Quemsomos_Controller = require('../controllers/Quemsomos_Controller');
 
-router.get('/quemsomos', Quemsomos_Controller);
-  
-module.exports = router;
+let quemsomos = function(router){
+    router.get('/quemsomos', Quemsomos_Controller.quemsomos);
+}
+
+module.exports = quemsomos;

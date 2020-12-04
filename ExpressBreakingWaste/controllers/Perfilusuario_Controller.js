@@ -17,7 +17,7 @@ module.exports = {
         res.redirect('/views/entre');
     },
 
-    editar: function(req, res, next) {
+    editarUser: function(req, res, next) {
         let empresa = empresas.find((empresa) => {
             empresas.id == id;
         })
@@ -43,15 +43,35 @@ module.exports = {
             residuo = req.body.residuo;
             endereco = req.body.endereco;
                    
-            res.redirect('/empresa');
+            res.redirect('/views/entre');
         });
     },
 
-    deletar:
+    //deletar:
 
-    criar:
+    //criarUser: precisa desse? Pra mim, guardar e criar são as mesmas coisas
 
-    guardar:
+    guardarUser: function (req, res, next) {
+        let json_empresa = fs.readFileSync(path.join(_dirname, '..', 'data', 'empresas.json'));
+
+        empresas.push({
+            email: req.body.email,
+            cnpj: req.body.cnpj,
+            telefone: req.body.cnpj,
+            endereco: req.body.endereco,
+            numero: req.body.endereco,
+            bairro: req.body.bairro,
+            complemento: req.body.bairro,
+            cidade: req.body.cidade,
+            estado: req.body.estado,
+            cep: req.body.cep,
+            funcionamento: res.body.funcionamento
+        });
+
+        let novo_json_empresas = JSON.stringify(empresas)
+        fs.writeFileSync(path.join(__dirname, '..', 'data', 'empresas.json'), novo_json_empresas);
+        res.send('Operação efetuada com sucesso!');
+    },
 
     
 }    

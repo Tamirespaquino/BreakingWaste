@@ -1,6 +1,6 @@
 const Quemsomos_Controller = {
-    quemsomos: (req, res) => {
-        res.render('quemsomos')
+    quemsomos: function (req, res) {
+        res.render('quemsomos');
     }
 }
 

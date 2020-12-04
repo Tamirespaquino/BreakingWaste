@@ -45,6 +45,7 @@
         </div>
       </section>
 
+      <!--Dados do usuário que criou o cadastro-->
       <div class="row">
         <div class="col-md-6">
           
@@ -115,8 +116,9 @@
 
         <div class="col-md-6">
          
+          <!--Dados da empresa-->
           <div class="box-pedidos">
-            <h3 class="titulo-pedidos">Pedidos</h3>
+            <h3 class="titulo-pedidos">Pedidos</h3> 
             <div class="row">
               <div class="col-md-6">
                 <div class="contorno">
@@ -135,7 +137,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <h5 class="sobre-itens">Nome do usuário</h5>
+                <h5 class="sobre-itens">Nome da empresa</h5>
               </div>
 
             </div>
@@ -146,7 +148,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <h5 class="sobre-itens">E-mail do usuário</h5>
+                <h5 class="sobre-itens">E-mail comercial</h5>
               </div>
 
             </div>
@@ -165,11 +167,21 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="contorno">
-                  <h5 class="dgi-sobre-itens">Cargo</h5>
+                  <h5 class="dgi-sobre-itens">Especialidade</h5>
                 </div>
               </div>
               <div class="col-md-6">
-                <h5 class="sobre-itens">Cargo Usuário</h5>
+                <h5 class="sobre-itens">Especialidade da Empresa</h5>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="contorno">
+                    <h5 class="dgi-sobre-itens">CNPJ</h5>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h5 class="sobre-itens">CNPJ da Empresa</h5>
               </div>
 
             </div>  
@@ -317,7 +329,7 @@
 
 
   <!--Footer-->
-  <%-include ('./partials/footer')%> 
+  <%- include('partials/footer') %> 
 
 
   <!--JQuery, JS e Popper.Js-->

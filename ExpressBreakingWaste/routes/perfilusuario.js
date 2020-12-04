@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var Perfilusuario_Controller = require('../controllers/Perfilusuario_Controller');
+// var Perfilusuario_Controller = require('../controllers/Perfilusuario_Controller');
 
-
+// let perfil = function(router) {
+//     //router.get('/', Perfilusuario_Controller.perfil)
+// }
   
-module.exports = router
+// module.exports = perfil
