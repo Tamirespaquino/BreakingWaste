@@ -11,64 +11,76 @@ module.exports = (sequelize, DataTypes) => {
 
             },
             username: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             email: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRINT,
                 uallownull: false,
             },
             password: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             razao_social: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             cnpj: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 allownull: false,
                 unique: true
             },
             telefone: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             endereco: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: alse,
             },
             numero: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: alse,
             },
             bairro: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             complemento: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             cidade: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             estado: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             cep: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
-            situacao_funcionamento: {
-                type: DataTypes.INTEGER,
+            situacaofuncionamento: {
+                type: DataTypes.STRING,
                 uallownull: false,
             },
-            tipo_usuario: {
-                type: DataTypes.INTEGER,
+            tipousuario: {
+                type: DataTypes.STRING,
+                uallownull: false,
+            },
+            tiporesiduos: {
+                type: DataTypes.STRING,
+                uallownull: false,
+            },
+            quantidadebombonas: {
+                type: DataTypes.STRING,
+                uallownull: false,
+            },
+            tamanhobombonas: {
+                type: DataTypes.STRING,
                 uallownull: false,
             },
         },

@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
     const orcamento = sequelize.define(
-    "Usuário_cadastrado",
+    "Orcamento",
     {
         id: {
             type: DataTypes.INTEGER,
@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
 Orcamento.associate = (models) => {
     Orcamento.belongsToMany(models.Usuario_cadastrado, {
          through:'Usuario_cadastrado_orcamento', as: 'orcamento', foreignKey:'orcamento_id'});
-     Orcamento.belongsToMany(models.Pedido, {
+    Orcamento.belongsToMany(models.Pedido, {
          through:'Pedido_orcamento', as: 'orcamento', foreignKey:'orcamento_id'});
  }
  return orcamento;
