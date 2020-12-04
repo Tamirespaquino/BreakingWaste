@@ -1,4 +1,5 @@
 const { Usuario_cadastrado } = require('../models')
+// puxar a model orcamento
 
 const Home_Controller = {
     home: (req, res) => {
@@ -16,8 +17,10 @@ const Home_Controller = {
             like: {
                 cep: campos.cep
             }
+        // if para retornar somente usuários do tipo "quero retirar"
         }
         );
+        // busca para orcamento
         return res.render('resultadobusca', {busca})
     }
 }

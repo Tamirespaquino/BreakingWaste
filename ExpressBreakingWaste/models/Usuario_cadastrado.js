@@ -101,9 +101,6 @@ module.exports = (sequelize, DataTypes) => {
         Usuario_cadastrado.belongsToMany(models.usuario_cadastrado, {
             through: 'Usuario_cadastrado_usuario_cadastrado', as: 'usuario_cadastrado', foreignKey: 'usuario_cadastrado_id'
         });
-        Usuario_cadastrado.belongsToMany(models.usuario_cadastrado, {
-            through: 'Usuario_cadastrado_usuario_cadastrado', as: 'usuario_cadastrado', foreignKey: 'usuario_cadastrado_id1'
-        });
     }
     return usuario_cadastrado;
 }

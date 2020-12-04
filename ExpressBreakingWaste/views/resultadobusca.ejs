@@ -39,18 +39,17 @@
     <div class="row">
       <div class="col-md-2 col-sm-12 text-center">
         <h3 class="text-left text-success">Confira o resultado da pesquisa</h3>
-        <!--MELHORAR ESSES CARDS AQUI E FAZER O dom PARA RETOMR O CÓDIGO LÁ EMABIXO-->
+        <!--MELHORAR ESSES CARDS AQUI E FAZER O dom PARA RETOMR O CÓDIGO LÁ EMABIXO e subir nome da empresa e retornar nome da empresa, cep e orcamento-->
          
         <% result.forEach((campos) => { %>
             <tr>
-                <td><%= campos.id %></td>
+            
                 <td><%= campos.cep %></td>
-                <td><%= campos.tiporesiduos %></td>
-                <td><%= campos.tamanhobombonas %></td>
-                <td><%= campos.quantidadebombonas %></td>
                 <td><button>NOVA BUSCA</button></td>
             </tr>            
         <% }) %>
+
+        
       
       </div>
       <div class="col-md-10 col-sm-12 text-center">
