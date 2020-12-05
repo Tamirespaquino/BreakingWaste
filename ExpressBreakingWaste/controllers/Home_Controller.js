@@ -1,4 +1,4 @@
-const { Usuario_cadastrado } = require('../models')
+const { Usuario } = require('../models')
 
 const Home_Controller = {
     home: (req, res) => {
@@ -7,7 +7,7 @@ const Home_Controller = {
 
     busca: async (req, res) => {
         const campos = req.query
-        const busca = await Usuario_cadastrado.findAll({
+        const busca = await Usuario.findAll({
             where: {
                 tipoderesiduos: campos.tiposderesiduos,
                 tamanhobombinas: campos.tamanhobombonas,

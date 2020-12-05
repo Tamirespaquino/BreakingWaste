@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const usuario_cadastrado = sequelize.define(
-        "Usuario_cadastrado",
+    const usuario = sequelize.define(
+        "Usuario",
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
                 uallownull: false,
             },
             email: {
-                type: DataTypes.STRINT,
+                type: DataTypes.STRING,
                 uallownull: false,
             },
             password: {
@@ -87,23 +87,23 @@ module.exports = (sequelize, DataTypes) => {
 
         {
             timestamps: false,
-            tableName: 'Usuario_cadastrado'
+            tableName: 'usuarios'
         }
     )
 
-    Usuario_cadastrado.associate = (models) => {
-        Usuario_cadastrado.belongsToMany(models.Pedido, {
-            through: 'Pedido_usuario_cadastrado', as: 'usuario_cadastrado', foreignKey: 'usuario_cadastrado_id'
+    usuario.associate = (models) => {
+        usuario.belongsToMany(models.Pedido, {
+            through: 'pedidos_usuarios', as: 'pedido_fk', foreignKey: 'pedido_id'
         });
-        Usuario_cadastrado.belongsToMany(models.Orcamento, {
-            through: 'Usuario_cadastrado_orcamento', as: 'usuario_cadastrado', foreignKey: 'usuario_cadastrado_id'
+        usuario.belongsToMany(models.Orcamento, {
+            through: 'usuarios_orcamentos', as: 'orcamento_fk', foreignKey: 'orcamento_id'
         });
-        Usuario_cadastrado.belongsToMany(models.usuario_cadastrado, {
-            through: 'Usuario_cadastrado_usuario_cadastrado', as: 'usuario_cadastrado', foreignKey: 'usuario_cadastrado_id'
+        usuario.belongsToMany(models.Usuario, {
+            through: 'usuarios_usuarios', as: 'usuario_fk', foreignKey: 'usuario_id'
         });
-        Usuario_cadastrado.belongsToMany(models.usuario_cadastrado, {
-            through: 'Usuario_cadastrado_usuario_cadastrado', as: 'usuario_cadastrado', foreignKey: 'usuario_cadastrado_id1'
+        usuario.belongsToMany(models.Usuario, {
+            through: 'usuarios_usuarios', as: 'usuario_fk1', foreignKey: 'usuario_id1'
         });
     }
-    return usuario_cadastrado;
+    return usuario;
 }

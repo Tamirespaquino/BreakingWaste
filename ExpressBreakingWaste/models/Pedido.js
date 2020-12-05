@@ -25,24 +25,24 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 uallownull: false,
             },
-            usuario_busca_id: {
+            usuario_id: {
                 type: DataTypes.INTEGER,
-                allownull: false,
+                uallownull: false,
             }
         },
 
         {
             timestamps: false,
-            tableName: 'Pedido'
+            tableName: 'pedidos'
         }
     )
 
     pedido.associate = (models) => {
-        Pedido.belongsToMany(models.Usuario_cadastrado, {
-            through: 'Pedido_usuario_cadastrado', as: 'pedido_id', foreignKey: 'pedido_id'
+        pedido.belongsToMany(models.Usuario, {
+            through: 'pedidos_usuarios', as: 'usuario_fk', foreignKey: 'usuario_id'
         });
-        Pedido.belongsToMany(models.Orcamento, {
-            through: 'Pedido_orcamento', as: 'pedido', foreignKey: 'pedido_id'
+        pedido.belongsToMany(models.Orcamento, {
+            through: 'pedidos_orcamentos', as: 'orcamento_fk', foreignKey: 'orcamento_id'
         });
     }
     return pedido;

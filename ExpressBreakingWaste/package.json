@@ -14,10 +14,15 @@
     "fs": "0.0.1-security",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "parser": "^0.1.4",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "sqlite3": "^5.0.0",
+    "tedious": "^9.2.1"
   },
   "devDependencies": {
     "sequelize-cli": "^6.2.0"

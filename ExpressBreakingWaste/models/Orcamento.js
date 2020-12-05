@@ -9,24 +9,26 @@ module.exports = (sequelize, DataTypes) => {
                 autoIncrement: true,
                 primaryKey: true
             },
-            orcamento: {
-                type: DataTypes.STRING,
-                uallownull :false,
-                unique: true
+            preco: {
+                type: DataTypes.FLOAT,
+                uallownull: false,
+            },
+            usuario_id:{
+                type: DataTypes.INTEGER,
+                uallownull: false,
             },
         },
-
         {
             timestamps: false,
-            tableName: 'Orcamento'
+            tableName: 'orcamentos'
         }
     )
 
     orcamento.associate = (models) => {
-        Orcamento.belongsToMany(models.Usuario_cadastrado, {
-                through:'Usuario_cadastrado_orcamento', as: 'orcamento', foreignKey:'orcamento_id'});
-        Orcamento.belongsToMany(models.Pedido, {
-                through:'Pedido_orcamento', as: 'orcamento', foreignKey:'orcamento_id'});
+        orcamento.belongsToMany(models.Usuario, {
+                through: 'usuarios_orcamentos', as: 'usuario_fk', foreignKey:'usuario_id'});
+        orcamento.belongsToMany(models.Pedido, {
+                through: 'pedidos_orcamentos', as: 'pedido_fk', foreignKey:'pedido_id'});
     }
     return orcamento;
 }
