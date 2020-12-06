@@ -5,7 +5,7 @@ let bcrypt = require('bcrypt');
 module.exports = {
 
     cadastro: function (req, res, next) {
-        res.render('views/cadastrese');
+        res.render('cadastrese');
     },
 
     guardarEmpresa: function (req, res, next) {

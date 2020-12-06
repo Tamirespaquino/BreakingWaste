@@ -4,10 +4,10 @@ let fs = require('fs');
 module.exports = {
 
     contato: function (req, res, next) {
-        res.render('views/contato');
+        res.render('contato');
     },
 
-    enviarmensagem: function (req, res, next) {
+    enviarMensagem: function (req, res, next) {
         let json_mensagens = fs.readFileSync(path.join(_dirname, '..', 'data', '.json_mensagens'));
 
         empresas.push({

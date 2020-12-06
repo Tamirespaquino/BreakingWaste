@@ -4,7 +4,7 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
     entre: function(req, res, next) {
-        res.render('/views/entre');
+        res.render('entre');
     },
 
     logar: function(req, res) {
@@ -25,6 +25,6 @@ module.exports = {
             console.log("RESPONSE:", response);
         });
     
-        res.redirect('/views/entre');
+        res.redirect('entre');
     }
 }

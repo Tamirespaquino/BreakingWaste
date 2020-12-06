@@ -5,7 +5,7 @@ const { createInflateRaw } = require('zlib');
 
 module.exports = {
     entre: function(req, res, next) {
-        res.render('/views/entre');
+        res.render('/entre');
     },
 
     visualizar: function(req, res, next) {
@@ -14,7 +14,7 @@ module.exports = {
             res.render('/empresa/visualizar');
         });
 
-        res.redirect('/views/entre');
+        res.redirect('/entre');
     },
 
 
@@ -44,7 +44,7 @@ module.exports = {
             residuo = req.body.residuo;
             endereco = req.body.endereco;
                    
-            res.redirect('/views/entre');
+            res.redirect('/entre');
         });
     },
 
@@ -55,7 +55,7 @@ module.exports = {
     guardarUser: function (req, res, next) {
         let json_empresa = fs.readFileSync(path.join(_dirname, '..', 'data', 'empresas.json'));
 
-        empresas.push({
+        empresas.post({
             email: req.body.email,
             cnpj: req.body.cnpj,
             telefone: req.body.cnpj,
