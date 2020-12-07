@@ -358,6 +358,10 @@ ul#about-list li i.fas {
 
  .itemq:hover {
      opacity: 1;
+     -webkit-transition:  500ms ease-out 0.3s;
+    -moz-transition:  500ms ease-out 0.3s;
+    -o-transition:  500ms ease-out 0.3s;
+    transition:  500ms ease-out 0.3s;
  }
  
  .service-box p {
