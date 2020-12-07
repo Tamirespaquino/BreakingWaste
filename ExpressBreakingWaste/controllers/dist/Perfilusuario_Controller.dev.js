@@ -9,29 +9,29 @@ var _require = require('zlib'),
 
 module.exports = {
   entre: function entre(req, res, next) {
-    res.render('/entre');
+    res.render('perfil_usuario');
   },
   visualizar: function visualizar(req, res, next) {
     var empresa = empresas.findAll(function (empresa) {
       empresas.id == id;
-      res.render('/empresa/visualizar');
+      res.render('perfil_usuario');
     });
-    res.redirect('/entre');
+    res.redirect('perfil_usuario');
   },
   editar: function editar(req, res, next) {
     var empresa = empresas.find(function (empresa) {
       empresas.id == id;
     });
-    empresas.get('/empresa/editar', function (req, res, next) {
+    empresas.get('editar', function (req, res, next) {
       var id = req.params.id;
       var empresa = empresas.find(function (empresa) {
         return empresas.id == id;
       });
-      res.render('empresa/editar', {
+      res.render('perfil_usuario', {
         empresa: empresa
       });
     });
-    empresas.put('/empresa/alterar', function (req, res, next) {
+    empresas.put('editar', function (req, res, next) {
       var id = req.params.id;
       var empresa = empresas.find(function (empresa) {
         return empresa.id == id;
@@ -45,7 +45,7 @@ module.exports = {
       parceira = req.body.parceira;
       residuo = req.body.residuo;
       endereco = req.body.endereco;
-      res.redirect('/entre');
+      res.redirect('perfil_usuario');
     });
   },
   //deletar:

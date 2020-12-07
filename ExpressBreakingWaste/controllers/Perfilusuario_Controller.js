@@ -5,16 +5,16 @@ const { createInflateRaw } = require('zlib');
 
 module.exports = {
     entre: function(req, res, next) {
-        res.render('/entre');
+        res.render('perfil_usuario');
     },
 
     visualizar: function(req, res, next) {
         let empresa = empresas.findAll((empresa) => {
             empresas.id == id;
-            res.render('/empresa/visualizar');
+            res.render('perfil_usuario');
         });
 
-        res.redirect('/entre');
+        res.redirect('perfil_usuario');
     },
 
 
@@ -23,15 +23,15 @@ module.exports = {
             empresas.id == id;
         })
 
-        empresas.get('/empresa/editar', function(req, res, next) {
+        empresas.get('editar', function(req, res, next) {
             const id = req.params.id;
         
             let empresa = empresas.find(empresa => empresas.id == id);
         
-            res.render('empresa/editar', {empresa});
+            res.render('perfil_usuario', {empresa});
         });
 
-        empresas.put('/empresa/alterar', function(req, res, next) {
+        empresas.put('editar', function(req, res, next) {
             const id = req.params.id;
             let empresa = empresas.find(empresa => empresa.id == id);
             usuario = req.body.usuario;
@@ -44,7 +44,7 @@ module.exports = {
             residuo = req.body.residuo;
             endereco = req.body.endereco;
                    
-            res.redirect('/entre');
+            res.redirect('perfil_usuario');
         });
     },
 
