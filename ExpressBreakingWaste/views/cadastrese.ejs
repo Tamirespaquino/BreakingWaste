@@ -28,7 +28,7 @@
   <%- include('partials/header') %>
 
 
-  <div class="main-ilustracao container">
+  <div class="main-ilustracao">
     <img class="img-fale-conosco" src="/public/img/SVG/pc cadastro.svg" alt="cadastro">
 
     <div data-aos="zoom-in">
@@ -48,7 +48,7 @@
       <!-- formulário sessão e-mail-->
       <br></br>
 
-      <div class="container col-md-6">
+      <div class="container col-md-8">
         <form class="form-group col-md-12">
           <div class="form-group">
             <label for="email">Endereço de email</label>
@@ -71,7 +71,7 @@
       </div>
 
       <!--formulário sessão dados da empresa-->
-      <div class="container col-md-6">
+      <div class="container col-md-8">
 
         <form class="form-group col-md-12">
           <div class="form-group">
@@ -123,7 +123,7 @@
               <label for="cidade">Cidade</label>
               <input type="text" class="form-control" id="cidade">
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-2">
               <label for="estado">Estado</label>
               <select id="estado" class="form-control">
                 <option selected disabled>Selecione</option>
@@ -157,7 +157,7 @@
               </select>
             </div>
 
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-4">
               <label for="cep">CEP</label>
               <input type="text" id="cep" class="form-control" onkeypress="$(this).mask('00.000-000')">
             </div>
@@ -165,27 +165,39 @@
 
           <div class="form-group col-md-12 text-center">
             <div><label for="funcionamento">Situação de funcionamento</label></div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="ativa" name="situacao" class="custom-control-input">
-              <label class="ativa" for="ativa">Situação Ativa</label>
+            <div class="form-check botao-radio">
+              <input class="form-check-input" type="radio" name="situacao" id="ativa" value="option1" checked>
+              <label class="ativa" for="ativa">
+                Situação Ativa
+              </label>
             </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="inativa" name="situacao" class="custom-control-input">
-              <label class="inativa" for="inativa">Situação Inativa</label>
+            <div class="form-check botao-radio">
+              <input class="form-check-input" type="radio" name="situacao" id="inativa" value="option2">
+              <label class="inativa" for="inativa">
+                Situação Inativa
+              </label>
             </div>
           </div>
 
-          <div class="form-group col-md-12 text-center">
-            <div><label for="funcionamento" id="tipousuario">Interesses de parceria</label></div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="descartar" name="parceria" class="custom-control-input">
-              <label class="descartar" for="descartar">Quero descartar resíduos</label>
+            
+
+            <div class="form-group col-md-12 text-center">
+              <div><label for="funcionamento" id="tipousuario">Interesses de parceria</label></div>
+              
+              <div class="form-check botao-radio">
+                <input class="form-check-input" type="radio" name="parceria" id="descartar" value="option1" checked>
+                <label class="descartar" for="descartar">
+                  Quero descartar resíduos
+                </label>
+              </div>
+              <div class="form-check botao-radio">
+                <input class="form-check-input" type="radio" name="parceria" id="retirar" value="option2">
+                <label class="retirar" for="retirar">
+                  Quero retirar resíduos
+                </label>
+              </div>
+                
             </div>
-            <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="retirar" name="pareria" class="custom-control-input">
-              <label class="retirar" for="retirar">Quero retirar resíduos</label>
-            </div>
-          </div>
 
           <div class="form-group col-md-12 text-center">
             <div class="form-group">
