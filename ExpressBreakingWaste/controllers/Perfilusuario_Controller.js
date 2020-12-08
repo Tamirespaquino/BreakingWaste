@@ -1,4 +1,9 @@
 let bcrypt = require('bcrypt');
+const { Usuario_cadastrado } = require('../models')
+const { Orcamento } = require('../models')
+const { Pedido } = require('../models')
+
+
 
 module.exports = {
     entre: function (req, res, next) {
