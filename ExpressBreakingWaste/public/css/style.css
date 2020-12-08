@@ -358,6 +358,10 @@ ul#about-list li i.fas {
 
  .itemq:hover {
      opacity: 1;
+     -webkit-transition:  500ms ease-out 0.3s;
+    -moz-transition:  500ms ease-out 0.3s;
+    -o-transition:  500ms ease-out 0.3s;
+    transition:  500ms ease-out 0.3s;
  }
  
  .service-box p {
@@ -500,6 +504,7 @@ justify-content: center;
 
     footer{
        position: relative;
+       margin-top: 60px;
         
     }
     footer .container{
@@ -731,3 +736,204 @@ justify-content: center;
 
 
 
+.botao-radio{
+    display: inline !important;
+}
+
+
+/* STYLE DA PÁGINA DO USUÁRIO*/
+
+.caixa-user{
+    width: 100%;
+    background-color: rgb(207, 203, 203);
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 1em rgb(134, 133, 133);
+    border: solid 1px #a19f9f;
+  }
+
+  .user-photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 80px;
+    border: solid 2px #252525;
+  }
+
+  .sobre-itens{
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  .dgi-sobre-itens{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .contorno{
+    margin-left: 8px;
+    margin-top: 8px;
+    width: 70%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 8px;
+    border: 1px solid ;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .box-sobre{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    background-color: rgb(207, 203, 203);
+    border: solid 1px #a19f9f;
+    box-shadow:  3px 3px 1em rgb(134, 133, 133);
+    margin-bottom:  20px;
+    margin-top: 20px;
+    box-sizing:border-box;
+  }
+
+  .titulo-pedidos, .titulo-sobre{
+    text-align: center;
+    color: #000;
+    margin-top: 15px    ;
+  }
+
+  .box-pedidos{
+    width: 100%;
+    height: 100%;   
+    background-color: rgb(207, 203, 203);
+    border: solid 1px #a19f9f;
+    box-shadow:  3px 3px 1em rgb(134, 133, 133);
+    margin-top: 20px;
+    margin-bottom: 20px;
+             
+  }
+    
+  @media (max-width: 1002px){
+    .user-name, .ramo-name{
+        text-align: center;
+        }
+        .contorno{
+          width: 70%;
+          display: inline-block;
+        }
+        .sobre-itens{
+        position: relative;
+        bottom: 45px;
+    
+  }
+
+  @media (max-width: 767px){
+      
+      .user-name, .ramo-name{
+        text-align: center;
+        }
+        .contorno{
+          width: 70%;
+          display: inline-block;
+        }
+        .sobre-itens{
+        position: relative;
+        bottom: 45px;
+      }
+        .box-pedidos{
+            margin-top: 50px;
+        }
+      
+        
+      }
+      .refs{
+          display: inline-block;
+          width: 1.5em;
+          height: 1.5em;
+      }
+      )
+    }
+
+
+  @media (max-width: 600px){
+      
+    .user-name, .ramo-name{
+      text-align: center;
+      font-size: 1.5em;
+      }
+      .sobre-itens{
+        position: relative;
+        bottom: 45px;
+      }
+
+      .user-photo{
+        width: 90px;
+        height: 90px;
+      }
+  }
+
+  @media (max-width: 450px){
+      
+      .user-name, .ramo-name{
+        text-align: center;
+        }
+        .sobre-itens{
+          position: relative;
+          bottom: 32px;
+        }
+
+        .sobre-itens, .dgi-sobre-itens{
+          font-size: 13px;
+        }
+
+    }
+
+    .refs{
+        margin-top: 15px !important;
+        margin-left: 10px;
+    }
+
+    .deletar{
+        color: #000;
+        display: inline-block;
+    }
+
+    .editar{
+        color: #000;
+        display: inline-block;
+    }
+
+     @media (max-width: 767px){
+      
+      .user-name, .ramo-name{
+        text-align: center;
+        }
+        .contorno{
+          width: 70%;
+          display: inline-block;
+        }
+        .sobre-itens{
+        position: relative;
+        bottom: 45px;
+      }
+        .box-pedidos{
+            margin-top: 50px;
+        }
+      
+        
+    }
+    @media (max-width: 392px){
+        .user-name, .ramo-name{
+            text-align: center;
+            }
+            .contorno{
+              width: 60%;
+              display: inline-block;
+            }
+            .sobre-itens{
+            position: relative;
+            bottom: 45px;
+        
+      }

@@ -50,6 +50,8 @@ module.exports = {
   },
   //deletar:
   //criarUser: precisa desse? Pra mim, guardar e criar são as mesmas coisas
+  // na verdade não, tem que pensar a lógica como encadeamento. Ela não vai voltar para o guardar se vc não chamar um callback, então tem
+  //que criar uma nova função... a não ser que vc chame a função guardar novamente como call back embaixo e faça a lógica para retornar (Carol)
   guardarUser: function guardarUser(req, res, next) {
     var json_empresa = fs.readFileSync(path.join(_dirname, '..', 'data', 'empresas.json'));
     empresas.post({
