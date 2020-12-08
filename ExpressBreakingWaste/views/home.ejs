@@ -23,7 +23,18 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" type = "text/css" rel="stylesheet">
+  <link href="../assets/dist/css/bootstrap.min.css" type = "text/css" rel="stylesheet">
+
+  <!-- Leaflet Map -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
 
     <style>
       .bd-placeholder-img {
@@ -178,6 +189,8 @@
       </div>
   </div>
 
+  <div id="mapid"></div>
+
   <script>
     let adicione = document.getElementById("adicionar")
     let forms = document.getElementById("formulario")
@@ -187,11 +200,10 @@
       document.body.appendChild(forms)
     }
   </script>
-  <div>
-    <iframe width="600" height="450" frameborder="0" style="border:0" allowfullscreen
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANzagXYE7ZLsP1da8y7MII5lQ5saG29UQ&q=Space+Needle,Seattle+WA">
-    </iframe>
-  </div>
+  <!--<div>
+    <img class="image-google" alt="mapa-google" src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=14&size=400x400&key=AIzaSyANzagXYE7ZLsP1da8y7MII5lQ5saG29UQ
+    "/>
+  </div>-->
 
   <!--Footer-->
   <%- include('partials/footer') %> 
