@@ -1,7 +1,4 @@
-var path = require('path');
-var fs = require('fs');
-const { createInflateRaw } = require('zlib');
-
+let bcrypt = require('bcrypt');
 
 module.exports = {
     entre: function (req, res, next) {
