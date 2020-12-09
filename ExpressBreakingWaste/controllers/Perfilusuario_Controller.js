@@ -1,5 +1,6 @@
 var path = require('path');
 var fs = require('fs');
+var bodyParser = require('body-parser');
 const { createInflateRaw } = require('zlib');
 
 
@@ -15,16 +16,17 @@ module.exports = {
     },
 
 
-    editar: function (req, res, next) {
+    editar: ('/perfilusuario', function (req, res, next) { //igual app.get /cad-pagamento
         const id = req.params.id;
         const empresa = empresa.find(empresa => empresa.id == id);
         res.render('perfilusuario/editar', { empresa });
-    },
+    }),
 
-    alterar: function (req, res, next) {
+    alterar: ('/add-formUsuario', function (req, res, next) { //igual app.post /add-pagamento
         const id = req.params.id;
         const empresa = empresa.find(empresa => empresa.id == id);
 
+        nome = req.body.nome;
         email = req.body.email;
         senha = password_hashed;
         razao = req.body.razaoSocial;
@@ -43,7 +45,7 @@ module.exports = {
         tamanhobombonas = req.body.tamanhobombonas;
         tiposresiduos = req.body.tiposresiduos;
 
-    },
+    }),
 
     deletar: function (req, res, next) {
         const id = req.params.id;
@@ -101,5 +103,17 @@ module.exports = {
         })
 
         res.redirect('/perfilusuario');
-    }
-} 
+    },
+
+    user: ('/add-formUsuario', function(req, res) {
+        res.render('perfilusuario');
+    },
+     ('/add-formUsuario', function(req, res) {
+        res.send("Nome: " + req.body.nome);
+        res.send("E-mail: " + req.body.email);
+
+    })
+
+    )
+        
+}

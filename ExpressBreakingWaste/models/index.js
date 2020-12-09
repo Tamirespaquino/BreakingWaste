@@ -31,6 +31,65 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+// (async () => {
+//     const database = require('../db');
+ 
+//     try {
+//         const resultado = await database.sync();
+//         console.log(resultado);
+//     } catch (error) {
+//         console.log(error);
+//     }
+
+//     const resultadoCreate = await PerfilUsuario.create({
+//       email: 'dengosa.pretinha@gmail.com',
+//       senha: 123456,
+//       razao: 'Gatinhos da Alegria',
+//       cnpj: 1234567080001
+//   })
+//   console.log(resultadoCreate);
+
+//     const perfil = await PerfilUsuario.findAll();
+//     console.log(perfil);
+  
+//     const produtos = await PerfilUsuario.findByPk(1);
+//     perfilUsuario.razao = "Gatinhos da Alegria";
+
+//     const resultadoSave = await produtos.save();
+//     console.log(resultadoSave);
+
+//     const produto= await PerfilUsuario.findByPk(1);
+//     perfilusuario.destroy();
+
+
+
+// })();
+
+//CREATE
+// const resultadoCreate = await PerfilUsuario.create({
+//     email: 'dengosa.pretinha@gmail.com',
+//     senha: 123456,
+//     razao: 'Gatinhos da Alegria',
+//     cnpj: 1234567080001
+// })
+// console.log(resultadoCreate);
+
+//READ
+// const perfil = await PerfilUsuario.findAll();
+// console.log(perfil);
+
+// //UPDATE
+// const perfilusuario = await PerfilUsuario.findByPk(1);
+// //console.log(perfilusuario);
+// perfilusuario.razao = "Gatinhos da Alegria";
+
+// const resultadoSave = await perfilusuario.save();
+// console.log(resultadoSave);
+
+// //DELETE
+// const perfilusuario = await PerfilUsuario.findByPk(1);
+// perfilusuario.destroy();
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

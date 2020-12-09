@@ -5,17 +5,17 @@ module.exports = (sequelize, DataTypes) => {
         {
             id: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
                 autoIncrement: true,
                 primaryKey: true
             },
             preco: {
                 type: DataTypes.FLOAT,
-                uallownull: false,
+                allownull: false,
             },
             usuario_id:{
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
             },
         },
         {

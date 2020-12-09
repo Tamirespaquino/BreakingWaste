@@ -5,26 +5,26 @@ module.exports = (sequelize, DataTypes) => {
         {
             id: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
                 autoIncrement: true,
                 primaryKey: true,
 
             },
             username: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             email: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             password: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             razao_social: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             cnpj: {
                 type: DataTypes.STRING,
@@ -33,55 +33,55 @@ module.exports = (sequelize, DataTypes) => {
             },
             telefone: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             endereco: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             numero: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             bairro: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             complemento: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             cidade: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             estado: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             cep: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             situacaofuncionamento: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             tipousuario: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             tiporesiduos: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             quantidadebombonas: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
             tamanhobombonas: {
                 type: DataTypes.STRING,
-                uallownull: false,
+                allownull: false,
             },
         },
 

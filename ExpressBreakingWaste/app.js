@@ -1,5 +1,6 @@
 const http = require("http");
 const express = require("express");
+const bodyParser = require("body-parser");
 const ejs = require('ejs');
 const Cadastrese_Controller = require("./controllers/Cadastrese_Controller");
 const path = require('path');
@@ -20,9 +21,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Body Parser
+app.use(bodyParser.urlencoded({ extended: false }))
+//parse application/json
+app.use(bodyParser.json())
+
 // rotas
 app.use(routes)
-
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {

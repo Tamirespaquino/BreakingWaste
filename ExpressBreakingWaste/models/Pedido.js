@@ -5,29 +5,29 @@ module.exports = (sequelize, DataTypes) => {
         {
             id: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
                 autoIncrement: true,
                 primaryKey: true
             },
             cep_retirada: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
             },
             tipo_residuo: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
             },
             tamanho_bombonas: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
             },
             quantidade_bombinas: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
             },
             usuario_id: {
                 type: DataTypes.INTEGER,
-                uallownull: false,
+                allownull: false,
             }
         },
 
