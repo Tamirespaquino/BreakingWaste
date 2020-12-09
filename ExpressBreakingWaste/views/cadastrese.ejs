@@ -49,46 +49,45 @@
       <br></br>
 
       <div class="container col-md-8">
-        <form class="form-group col-md-12">
+        <form class="form-group col-md-12" method="POST" action="/cadastrese">
           <div class="form-group">
             <label for="email">Endereço de email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
               placeholder="Seu email">
             <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email com ninguém.</small>
           </div>
           <div class="form-group ">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <input type="password" name="password" class="form-control" id="senha" placeholder="Senha">
           </div>
 
           <div class="form-group ">
             <label for="confirmarsenha">Confirmar senha</label>
-            <input type="password" class="form-control" id="confirmarsenha" placeholder="Confirme sua senha">
+            <input type="password" name="senha" class="form-control" id="confirmarsenha" placeholder="Confirme sua senha">
           </div>
 
 
-        </form>
+        
       </div>
 
       <!--formulário sessão dados da empresa-->
       <div class="container col-md-8">
 
-        <form class="form-group col-md-12">
           <div class="form-group">
             <label for="razao">Razão social</label>
-            <input type="text" class="form-control" id="razao" placeholder="Minha Empresa LTDA">
+            <input type="text" name="razaoSocial" class="form-control" id="razao" placeholder="Minha Empresa LTDA">
           </div>
 
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="cnpj">CNPJ</label>
-              <input type="text" class="form-control" id="cnpj" onkeypress="$(this).mask('00.000.000/0000-00')"
+              <input type="text" name="cnpj" class="form-control" id="cnpj" onkeypress="$(this).mask('00.000.000/0000-00')"
                 placeholder="XX.XXX.XXX/XXXX-XX">
             </div>
 
             <div class="form-group col-md-6">
               <label for="telefone">Telefone</label>
-              <input type="text" class="form-control" id="telefone" onkeypress="$(this).mask('(00)000000000')"
+              <input type="text" name="telefone" class="form-control" id="telefone" onkeypress="$(this).mask('(00)000000000')"
                 placeholder="(00)123456789">
             </div>
 
@@ -96,23 +95,23 @@
 
           <div class="form-group">
             <label for="endereco">Endereço</label>
-            <input type="text" class="form-control" id="endereco" placeholder="Minha Empresa LTDA">
+            <input type="text" name="endereco" class="form-control" id="endereco" placeholder="Minha Empresa LTDA">
           </div>
 
           <div class="form-row">
             <div class="form-group col-md-2">
               <label for="numero">Número</label>
-              <input type="text" class="form-control" id="numero" placeholder="Número">
+              <input type="text" name="numero" class="form-control" id="numero" placeholder="Número">
             </div>
 
             <div class="form-group col-md-4">
               <label for="bairro">Bairro</label>
-              <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+              <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro">
             </div>
 
             <div class="form-group col-md-6">
               <label for="complemento">Complemento</label>
-              <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+              <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Complemento">
             </div>
 
           </div>
@@ -121,11 +120,11 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="cidade">Cidade</label>
-              <input type="text" class="form-control" id="cidade">
+              <input type="text" name="cidade" class="form-control" id="cidade">
             </div>
             <div class="form-group col-md-2">
               <label for="estado">Estado</label>
-              <select id="estado" class="form-control">
+              <select id="estado" name="estado" class="form-control">
                 <option selected disabled>Selecione</option>
                 <option>AC</option>
                 <option>AL</option>
@@ -159,20 +158,20 @@
 
             <div class="form-group col-md-4">
               <label for="cep">CEP</label>
-              <input type="text" id="cep" class="form-control" onkeypress="$(this).mask('00.000-000')">
+              <input type="text" name="cep" id="cep" class="form-control" onkeypress="$(this).mask('00.000-000')">
             </div>
           </div>
 
           <div class="form-group col-md-12 text-center">
             <div><label for="funcionamento">Situação de funcionamento</label></div>
             <div class="form-check botao-radio">
-              <input class="form-check-input" type="radio" name="situacao" id="ativa" value="option1" checked>
+              <input class="form-check-input" type="radio" name="funcionamento" id="ativa" value="option1" checked>
               <label class="ativa" for="ativa">
                 Situação Ativa
               </label>
             </div>
             <div class="form-check botao-radio">
-              <input class="form-check-input" type="radio" name="situacao" id="inativa" value="option2">
+              <input class="form-check-input" type="radio" name="funcionamento" id="inativa" value="option2">
               <label class="inativa" for="inativa">
                 Situação Inativa
               </label>
@@ -182,16 +181,16 @@
             
 
             <div class="form-group col-md-12 text-center">
-              <div><label for="funcionamento" id="tipousuario">Interesses de parceria</label></div>
+              <div><label for="funcionamento" name="tipousuario" id="tipousuario">Interesses de parceria</label></div>
               
               <div class="form-check botao-radio">
-                <input class="form-check-input" type="radio" name="parceria" id="descartar" value="option1" checked>
+                <input class="form-check-input" type="radio" name="tipousuario" id="descartar" value="option1" checked>
                 <label class="descartar" for="descartar">
                   Quero descartar resíduos
                 </label>
               </div>
               <div class="form-check botao-radio">
-                <input class="form-check-input" type="radio" name="parceria" id="retirar" value="option2">
+                <input class="form-check-input" type="radio" name="tipousuario" id="retirar" value="option2">
                 <label class="retirar" for="retirar">
                   Quero retirar resíduos
                 </label>
@@ -201,7 +200,7 @@
 
           <div class="form-group col-md-12 text-center">
             <div class="form-group">
-              <label class="my-1 mr-2" for="tipo de resíduo">Tipo de resíduo</label>
+              <label class="my-1 mr-2" name="tiposresiduos" for="tipo_de_resíduo">Tipo de resíduo</label>
               <select class="custom-select my-1 mr-sm-2" id="tiporesiduos">
                 <option value="0" selected desabled>Selecione</option>
                 <option value="1">Solventes clorados</option>
@@ -218,7 +217,7 @@
               </select>
             </div>
             <div class="form-group col-md-12 text-center">
-              <label class="my-1 mr-2" for="tamanho das bombonas">Tamanho das bombonas com as quais trabalha</label>
+              <label class="my-1 mr-2" name="tamanhobombonas" for="tamanho das bombonas">Tamanho das bombonas com as quais trabalha</label>
               <select class="custom-select my-1 mr-sm-2" id="tamanhobombonas">
                 <option selected disabled>Selecione</option>
                 <option value="1">10 litros</option>
@@ -245,7 +244,7 @@
               </select>
             </div>
           <div class="form-group col-md-12 text-center">
-            <label class="my-1 mr-2" for="quantidade de bombonas">Quantidade de bombonas com as quais trabalha</label>
+            <label class="my-1 mr-2" name="quantidadebombonas" for="quantidade de bombonas">Quantidade de bombonas com as quais trabalha</label>
             <select class="custom-select my-1 mr-sm-2" id="quantidadebombonas">
               <option selected disabled>Selecione</option>
               <option value="1">1</option>
@@ -273,7 +272,7 @@
           </div>
 
           <div class="text-center">
-            <a type="submit" href="perfilusuario" class="btn btn-success" role="button">Finalizar Cadastro</a>
+            <button type="submit" class="btn btn-success" role="button">Finalizar Cadastro</button>
           </div>
 
           <br></br>

@@ -9,7 +9,10 @@ module.exports = {
     },
 
     guardarEmpresa: function (req, res, next) {
-        let json_empresa = fs.readFileSync(path.join(_dirname, '..', 'data', 'empresas.json'));
+        let json_empresa = fs.readFileSync(path.join(__dirname, '..', 'data', 'empresas.json'));
+        let empresas = JSON.parse(json_empresa);
+        const salt = bcrypt.genSaltSync(10);
+        const password_hashed = bcrypt.hashSync(req.body.password, salt);
 
         empresas.push({
             email: req.body.email,
@@ -17,15 +20,15 @@ module.exports = {
             confirmarsenha: password_hashed,
             razao: req.body.razaoSocial,
             cnpj: req.body.cnpj,
-            telefone: req.body.cnpj,
+            telefone: req.body.telefone,
             endereco: req.body.endereco,
-            numero: req.body.endereco,
+            numero: req.body.numero,
             bairro: req.body.bairro,
-            complemento: req.body.bairro,
+            complemento: req.body.complemento,
             cidade: req.body.cidade,
             estado: req.body.estado,
             cep: req.body.cep,
-            funcionamento: res.body.funcionamento,
+            funcionamento: req.body.funcionamento,
             tipousuario: req.body.tipousuario,
             quantidadebombonas: req.body.quantidadebombonas,
             tamanhobombonas: req.body.tamanhobombonas,
