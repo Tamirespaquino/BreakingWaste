@@ -1,27 +1,42 @@
 //Teste - banco - Perfil do Usuário
 const sequelize = require('sequelize');
  
-const PerfilUsuario = sequelize.define('perfilusuario', {
-    email: {
-        type: Sequelize.STRING,
-        autoIncrement: true,
-        allowNull: false
+const perfilUsuario = sequelize.define('perfilusuario', {
+    "PerfilUsuario",
+    {
+        email: {
+            type: Sequelize.STRING,
+            autoIncrement: true,
+            allowNull: false
+        },
+        senha: {
+            type: Sequelize.INTEGER,
+            autoIncrement: false,
+            allowNull: false,
+            primaryKey: true
+        },
+        razao: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        cnpj: {
+            type: Sequelize.DOUBLE
+        },
     },
-    senha: {
-        type: Sequelize.INTEGER,
-        autoIncrement: false,
-        allowNull: false,
-        primaryKey: true
-    },
-    razao: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    cnpj: {
-        type: Sequelize.DOUBLE
+    {
+        timestamps: false,
+        tableName: 'perfilUsuario'
     }
+)
 
-});
+perfilUsuario.associate = (models) => {
+    perfilUsuario.belongsToMany(models.Usuario, {
+        through: 'usuarios_usuarios', as: 'usuario_fk', foreignKey: 'usuario_id'});
+        
+            
+        
+    })
+}
 
 
 module.exports = PerfilUsuario;

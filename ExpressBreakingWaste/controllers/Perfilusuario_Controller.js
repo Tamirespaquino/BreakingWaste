@@ -1,7 +1,12 @@
-var path = require('path');
-var fs = require('fs');
-var bodyParser = require('body-parser');
-const { createInflateRaw } = require('zlib');
+// var path = require('path');
+// var fs = require('fs');
+// var bodyParser = require('body-parser');
+// const { createInflateRaw } = require('zlib');
+let bcrypt = require('bcrypt');
+const { Usuario_cadastrado } = require('../models')
+const { Orcamento } = require('../models')
+const { Pedido } = require('../models')
+
 
 
 module.exports = {

@@ -1,5 +1,6 @@
 const { Usuario_cadastrado } = require('../models')
-// puxar a model orcamento
+const { Orcamento } = require('../models')
+const { Pedido } = require('../models')
 
 const Home_Controller = {
     home: (req, res) => {
