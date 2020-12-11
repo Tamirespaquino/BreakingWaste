@@ -1,74 +1,84 @@
 "use strict";
 
-var path = require('path');
+// var path = require('path');
+// var fs = require('fs');
+// var bodyParser = require('body-parser');
+// const { createInflateRaw } = require('zlib');
+var bcrypt = require('bcrypt');
 
-var fs = require('fs');
+var _require = require('../models'),
+    Usuario = _require.Usuario;
 
-var _require = require('zlib'),
-    createInflateRaw = _require.createInflateRaw;
+var _require2 = require('../models'),
+    Orcamento = _require2.Orcamento;
+
+var _require3 = require('../models'),
+    Pedido = _require3.Pedido;
 
 module.exports = {
   entre: function entre(req, res, next) {
-    res.render('perfil_usuario');
+    res.render('perfilusuario');
   },
-  visualizar: function visualizar(req, res, next) {
-    var empresa = empresas.findAll(function (empresa) {
-      empresas.id == id;
-      res.render('perfil_usuario');
+  visualizarempresa: function visualizarempresa(req, res, next) {
+    var id = req.params.id;
+    var empresa = empresa.find(function (empresa) {
+      return empresa.id == id;
     });
-    res.redirect('perfil_usuario');
-  },
-  editar: function editar(req, res, next) {
-    var empresa = empresas.find(function (empresa) {
-      empresas.id == id;
-    });
-    empresas.get('editar', function (req, res, next) {
-      var id = req.params.id;
-      var empresa = empresas.find(function (empresa) {
-        return empresas.id == id;
-      });
-      res.render('perfil_usuario', {
-        empresa: empresa
-      });
-    });
-    empresas.put('editar', function (req, res, next) {
-      var id = req.params.id;
-      var empresa = empresas.find(function (empresa) {
-        return empresa.id == id;
-      });
-      usuario = req.body.usuario;
-      nome = req.body.nome;
-      cnpj = req.body.cnpj;
-      email = req.body.email;
-      telefone = req.body.telefone;
-      profissao = req.body.profissao;
-      parceira = req.body.parceira;
-      residuo = req.body.residuo;
-      endereco = req.body.endereco;
-      res.redirect('perfil_usuario');
+    res.render('perfilusuario/mostrar', {
+      empresa: empresa
     });
   },
-  //deletar:
-  //criarUser: precisa desse? Pra mim, guardar e criar são as mesmas coisas
-  // na verdade não, tem que pensar a lógica como encadeamento. Ela não vai voltar para o guardar se vc não chamar um callback, então tem
-  //que criar uma nova função... a não ser que vc chame a função guardar novamente como call back embaixo e faça a lógica para retornar (Carol)
-  guardarUser: function guardarUser(req, res, next) {
-    var json_empresa = fs.readFileSync(path.join(_dirname, '..', 'data', 'empresas.json'));
-    empresas.post({
-      email: req.body.email,
-      cnpj: req.body.cnpj,
-      telefone: req.body.cnpj,
-      endereco: req.body.endereco,
-      numero: req.body.endereco,
-      bairro: req.body.bairro,
-      complemento: req.body.bairro,
-      cidade: req.body.cidade,
-      estado: req.body.estado,
-      cep: req.body.cep,
-      funcionamento: res.body.funcionamento
+  editar: ('/perfilusuario', function (req, res, next) {
+    //igual app.get /cad-pagamento
+    var id = req.params.id;
+    var empresa = empresa.find(function (empresa) {
+      return empresa.id == id;
     });
-    var novo_json_empresas = JSON.stringify(empresas);
-    fs.writeFileSync(path.join(__dirname, '..', 'data', 'empresas.json'), novo_json_empresas);
-    res.send('Operação efetuada com sucesso!');
-  }
+    res.render('perfilusuario/editar', {
+      empresa: empresa
+    });
+  }),
+  alterar: ('/add-formUsuario', function (req, res, next) {
+    //igual app.post /add-pagamento
+    var id = req.params.id;
+    var empresa = empresa.find(function (empresa) {
+      return empresa.id == id;
+    });
+    nome = req.body.nome;
+    email = req.body.email;
+    senha = password_hashed;
+    razao = req.body.razaoSocial;
+    cnpj = req.body.cnpj;
+    telefone = req.body.cnpj;
+    endereco = req.body.endereco;
+    numero = req.body.endereco;
+    bairro = req.body.bairro;
+    complemento = req.body.bairro;
+    cidade = req.body.cidade;
+    estado = req.body.estado;
+    cep = req.body.cep;
+    funcionamento = res.body.funcionamento;
+    tipousuario = req.body.tipousuario;
+    quantidadebombonas = req.body.quantidadebombonas;
+    tamanhobombonas = req.body.tamanhobombonas;
+    tiposresiduos = req.body.tiposresiduos;
+  }),
+  deletar: function deletar(req, res, next) {
+    var id = req.params.id;
+    var perfil = empresas.findIndex(function (empresa) {
+      return empresa.id == id;
+    });
+    if (perfil === -1) return res.redirect('/perfilususario');
+    empresas.splice(perfil, 1);
+    res.redirect('/perfilusuario');
+  },
+  criarnovo: function criarnovo(req, res, next) {
+    res.render('perfilusuario/criar');
+  },
+  user: ('/add-formUsuario', function (req, res) {
+    res.render('perfilusuario');
+  }, ('/add-formUsuario', function (req, res) {
+    res.send("Nome: " + req.body.nome);
+    res.send("E-mail: " + req.body.email);
+  }))
 };

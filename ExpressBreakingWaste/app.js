@@ -8,12 +8,23 @@ const logger = require('morgan');
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const routes = require('./routes');
+const session = require('express-session');
+
+const sessionConfig = {
+  secret: 'VnOI7vPW$13K*R8Gj5UW',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}
 
 const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.set('trust proxy', 1);
+app.use(session(sessionConfig));
 
 app.use(logger('dev'));
 app.use(express.json());

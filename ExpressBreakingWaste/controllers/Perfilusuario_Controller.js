@@ -3,7 +3,7 @@
 // var bodyParser = require('body-parser');
 // const { createInflateRaw } = require('zlib');
 let bcrypt = require('bcrypt');
-const { Usuario_cadastrado } = require('../models')
+const { Usuario } = require('../models')
 const { Orcamento } = require('../models')
 const { Pedido } = require('../models')
 
@@ -19,7 +19,6 @@ module.exports = {
         const empresa = empresa.find(empresa => empresa.id == id);
         res.render('perfilusuario/mostrar', { empresa });
     },
-
 
     editar: ('/perfilusuario', function (req, res, next) { //igual app.get /cad-pagamento
         const id = req.params.id;
@@ -67,49 +66,6 @@ module.exports = {
         res.render('perfilusuario/criar');
     },
 
-    guardarnovo: function (req, res, next) {
-        let { email,
-            senha,
-            razao,
-            cnpj,
-            telefone,
-            endereco,
-            numero,
-            bairro,
-            complemento,
-            cidade,
-            estado,
-            cep,
-            funcionamento,
-            tipousuario,
-            quantidadebombinas,
-            tamanhobombinas,
-            tiposresiduos } = res.body;
-
-        empresas.push({
-            id: empresas.reverse()[0].id + 1,
-            email,
-            senha,
-            razao,
-            cnpj,
-            telefone,
-            endereco,
-            numero,
-            bairro,
-            complemento,
-            cidade,
-            estado,
-            cep,
-            funcionamento,
-            tipousuario,
-            quantidadebombinas,
-            tamanhobombinas,
-            tiposresiduos
-        })
-
-        res.redirect('/perfilusuario');
-    },
-
     user: ('/add-formUsuario', function(req, res) {
         res.render('perfilusuario');
     },
@@ -120,5 +76,5 @@ module.exports = {
     })
 
     )
-        
+
 }

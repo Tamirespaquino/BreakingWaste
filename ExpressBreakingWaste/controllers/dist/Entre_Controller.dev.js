@@ -6,26 +6,58 @@ var fs = require('fs');
 
 var bcrypt = require('bcrypt');
 
+var _require = require('../models'),
+    Usuario = _require.Usuario;
+
 module.exports = {
   entre: function entre(req, res, next) {
     res.render('entre');
   },
   logar: function logar(req, res) {
-    var diretorio_empresas_json = path.join(__dirname, '..', 'data', 'empresas.json');
-    var json_empresas = fs.readFileSync(diretorio_empresas_json);
-    var empresas = JSON.parse(json_empresas);
-    var empresa = empresas.find(function (empresa) {
-      return empresa.email.toLowerCase() === req.body.email.toLowerCase();
-    });
+    var _req$body, username, password, user, senhaValida;
 
-    if (empresa == null) {
-      res.send("Perfil não encontrado.");
-    }
+    return regeneratorRuntime.async(function logar$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _req$body = req.body, username = _req$body.username, password = _req$body.password;
+            _context.next = 3;
+            return regeneratorRuntime.awrap(Usuario.findOne({
+              where: {
+                username: username
+              }
+            }));
 
-    bcrypt.compare(req.body.senha, usuario.senha).then(function (err, response) {
-      console.log("ERROR:", err);
-      console.log("RESPONSE:", response);
+          case 3:
+            user = _context.sent;
+
+            if (user) {
+              _context.next = 6;
+              break;
+            }
+
+            return _context.abrupt("return", res.redirect('/entre'));
+
+          case 6:
+            senhaValida = bcrypt.compareSync(password, user.password);
+
+            if (senhaValida) {
+              _context.next = 9;
+              break;
+            }
+
+            return _context.abrupt("return", res.redirect('/entre'));
+
+          case 9:
+            user.password = undefined;
+            req.session.usuario = user;
+            return _context.abrupt("return", res.json(user));
+
+          case 12:
+          case "end":
+            return _context.stop();
+        }
+      }
     });
-    res.redirect('entre');
   }
 };

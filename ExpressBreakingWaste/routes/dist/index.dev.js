@@ -6,7 +6,7 @@ var app = require('../app');
 
 var router = express.Router();
 
-var cadastrese = require('./cadastrese'); // var carrinho = require('./carrinho');
+var cadastrese = require('./cadastrese'); //var carrinho = require('./carrinho');
 
 
 var contato = require('./contato');
@@ -19,16 +19,20 @@ var perfil = require('./perfilusuario');
 
 var quemsomos = require('./quemsomos');
 
-var residuos = require('./residuos'); // var resultado = require('./resultadobusca');
+var residuos = require('./residuos');
 
+var resultado = require('./resultadobusca');
 
-cadastrese(router); // carrinho(router)
+var authMiddleware = require('../middlewares/auth');
 
-contato(router);
+cadastrese(router);
 entre(router);
 home(router);
-perfil(router);
 quemsomos(router);
-residuos(router); // resultado(router)
+residuos(router); //carrinho(router)
 
+router.use(authMiddleware);
+contato(router);
+perfil(router);
+resultado(router);
 module.exports = router;

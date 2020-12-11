@@ -35,19 +35,19 @@
   <section class="text-center">
     <img class="logo-entre mb-4" src="/img/logo bg gray_1.png" alt="logo">
     <h2 class="titulo-entre text-center text-success">Vamos entrar!</h2>
-    <form class="form-signin">
+    <form class="form-signin" method="POST" action="/entre" >
       <label for="inputEmail" class="sr-only">E-mail</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+      <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
       <br>
       <label for="inputPassword" class="sr-only">Senha</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
       <div class="checkbox mb-3 text-left">
         <label>
           <input type="checkbox" value="remember-me"> Recordar usuário
         </label>
       </div>
       <div class="text-center">
-        <a class="btn-entrar btn btn-success" type="submit" href="perfilusuario" role="button">Entrar</a>
+        <button class="btn-entrar btn btn-success" type="submit">Entrar</button>
       </div>
       
       <a class="entrar" href="cadastrese">Novo por aqui? Cadastre-se</a>

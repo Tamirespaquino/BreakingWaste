@@ -8,7 +8,6 @@ let perfil = function(router) {
     router.post('/perfil', Perfilusuario_Controller.alterar);
     router.put('/perfil', Perfilusuario_Controller.deletar);
     router.get('/perfil', Perfilusuario_Controller.criarnovo);
-    router.post('/perfil', Perfilusuario_Controller.guardarnovo);
     router.get('/perfil', Perfilusuario_Controller.user);
     router.post('/perfil', Perfilusuario_Controller.user);
 

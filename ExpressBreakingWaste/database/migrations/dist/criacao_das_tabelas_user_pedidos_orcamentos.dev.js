@@ -1,12 +1,10 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 module.exports = {
   up: function up(QueryInterface, DataTypes) {
     QueryInterface.createTable('pedidos_orcamentos', {
       pedido_id: {
-        uallowNull: false,
+        allowNull: false,
         type: DataTypes.INTERGER,
         references: {
           model: 'Pedido',
@@ -14,7 +12,7 @@ module.exports = {
         }
       },
       orcamento_id: {
-        uallowNull: false,
+        allowNull: false,
         type: DataTypes.INTERGER,
         references: {
           model: 'Orcamento',
@@ -24,7 +22,7 @@ module.exports = {
     });
     QueryInterface.createTable('pedidos_usuarios', {
       pedido_id: {
-        uallowNull: false,
+        allowNull: false,
         type: DataTypes.INTERGER,
         references: {
           model: 'Pedido',
@@ -32,7 +30,7 @@ module.exports = {
         }
       },
       usuario_id: {
-        uallowNull: false,
+        allowNull: false,
         type: DataTypes.INTERGER,
         references: {
           model: 'Usuario',
@@ -40,26 +38,35 @@ module.exports = {
         }
       }
     });
-    QueryInterface.createTable('usuarios_orcamentos', _defineProperty({
+    QueryInterface.createTable('usuarios_orcamentos', {
       usuario_id: {
-        uallowNull: false,
+        allowNull: false,
         type: DataTypes.INTERGER,
         references: {
           model: 'Usuario',
           key: id
         }
+      },
+      orcamento_id: {
+        allowNull: false,
+        type: DataTypes.INTERGER,
+        references: {
+          model: 'Orcamento',
+          key: id
+        }
       }
-    }, "usuario_id", {
-      uallowNull: false,
-      type: DataTypes.INTERGER,
-      references: {
-        model: 'Orcamento',
-        key: id
-      }
-    }));
-    QueryInterface.createTable('usuarios_usuarios', {
-      usuario_id: {
-        uallowNull: false,
+    });
+    QueryInterface.createTable('clientes_fornecedores', {
+      cliente_id: {
+        allowNull: false,
+        type: DataTypes.INTERGER,
+        references: {
+          model: 'Usuario',
+          key: id
+        }
+      },
+      fornecedor_id: {
+        allowNull: false,
         type: DataTypes.INTERGER,
         references: {
           model: 'Usuario',
@@ -68,7 +75,7 @@ module.exports = {
       }
     });
   },
-  down: function down(QueryInterface) {
+  down: function down(queryInterface) {
     queryInterface.dropTable('pedidos_orcamentos');
     queryInterface.dropTable('pedidos_usuarios');
     queryInterface.dropTable('usuarios_orcamentos');

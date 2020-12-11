@@ -165,13 +165,13 @@
           <div class="form-group col-md-12 text-center">
             <div><label for="funcionamento">Situação de funcionamento</label></div>
             <div class="form-check botao-radio">
-              <input class="form-check-input" type="radio" name="funcionamento" id="ativa" value="option1" checked>
+              <input class="form-check-input" type="radio" name="funcionamento" id="ativa" value="Ativo" checked>
               <label class="ativa" for="ativa">
                 Situação Ativa
               </label>
             </div>
             <div class="form-check botao-radio">
-              <input class="form-check-input" type="radio" name="funcionamento" id="inativa" value="option2">
+              <input class="form-check-input" type="radio" name="funcionamento" id="inativa" value="Inativo">
               <label class="inativa" for="inativa">
                 Situação Inativa
               </label>
@@ -184,13 +184,13 @@
               <div><label for="funcionamento" name="tipousuario" id="tipousuario">Interesses de parceria</label></div>
               
               <div class="form-check botao-radio">
-                <input class="form-check-input" type="radio" name="tipousuario" id="descartar" value="option1" checked>
+                <input class="form-check-input" type="radio" name="tipousuario" id="descartar" value="Descartar" checked>
                 <label class="descartar" for="descartar">
                   Quero descartar resíduos
                 </label>
               </div>
               <div class="form-check botao-radio">
-                <input class="form-check-input" type="radio" name="tipousuario" id="retirar" value="option2">
+                <input class="form-check-input" type="radio" name="tipousuario" id="retirar" value="Retirar">
                 <label class="retirar" for="retirar">
                   Quero retirar resíduos
                 </label>
@@ -200,52 +200,52 @@
 
           <div class="form-group col-md-12 text-center">
             <div class="form-group">
-              <label class="my-1 mr-2" name="tiposresiduos" for="tipo_de_resíduo">Tipo de resíduo</label>
-              <select class="custom-select my-1 mr-sm-2" id="tiporesiduos">
-                <option value="0" selected desabled>Selecione</option>
-                <option value="1">Solventes clorados</option>
-                <option value="2">Solventes não clorados</option>
-                <option value="3">Metais pesados em solução</option>
-                <option value="4">Metais pesados em estado sólido</option>
-                <option value="5">Ácidos</option>
-                <option value="6">Bases</option>
-                <option value="7">Aminas</option>
-                <option value="8">Cianetos</option>
-                <option value="9">Fenois</option>
-                <option value="10">Pesticidas</option>
-                <option value="11">Outros</option>
+              <label class="my-1 mr-2" for="tiporesiduos">Tipo de resíduo</label>
+              <select class="custom-select my-1 mr-sm-2"  name="tiposresiduos" id="tiporesiduos">
+                <option value="" selected desabled>Selecione</option>
+                <option value="solventes_clorado">Solventes clorados</option>
+                <option value="solventes_nao_clorado">Solventes não clorados</option>
+                <option value="metais_pesados_solucao">Metais pesados em solução</option>
+                <option value="metais_pesados_solido">Metais pesados em estado sólido</option>
+                <option value="acidos">Ácidos</option>
+                <option value="bases">Bases</option>
+                <option value="aminas">Aminas</option>
+                <option value="cianetos">Cianetos</option>
+                <option value="fenois">Fenois</option>
+                <option value="pesticidas">Pesticidas</option>
+                <option value="outros">Outros</option>
               </select>
             </div>
             <div class="form-group col-md-12 text-center">
-              <label class="my-1 mr-2" name="tamanhobombonas" for="tamanho das bombonas">Tamanho das bombonas com as quais trabalha</label>
-              <select class="custom-select my-1 mr-sm-2" id="tamanhobombonas">
+              <label class="my-1 mr-2" for="tamanhobombonas">Tamanho das bombonas com as quais trabalha</label>
+              <select class="custom-select my-1 mr-sm-2" name="tamanhobombonas" id="tamanhobombonas">
                 <option selected disabled>Selecione</option>
-                <option value="1">10 litros</option>
-                <option value="2">20 litros</option>
-                <option value="3">30 litros</option>
-                <option value="4">40 litros</option>
-                <option value="5">50 litros</option>
-                <option value="6">60 litros</option>
-                <option value="7">70 litros</option>
-                <option value="8">80 litros</option>
-                <option value="9">90 litros</option>
-                <option value="10">100 litros</option>
-                <option value="11">110 litros</option>
-                <option value="12">120 litros</option>
-                <option value="13">130 litros</option>
-                <option value="14">140 litros</option>
-                <option value="15">150 litros</option>
-                <option value="16">160 litros</option>
-                <option value="17">170 litros</option>
-                <option value="18">180 litros</option>
-                <option value="19">190 litros</option>
-                <option value="20">200 litros</option>
-                <option value="21">Outro</option>
+                <option value="10">10 litros</option>
+                <option value="20">20 litros</option>
+                <option value="30">30 litros</option>
+                <option value="40">40 litros</option>
+                <option value="50">50 litros</option>
+                <option value="60">60 litros</option>
+                <option value="70">70 litros</option>
+                <option value="80">80 litros</option>
+                <option value="90">90 litros</option>
+                <option value="100">100 litros</option>
+                <option value="110">110 litros</option>
+                <option value="120">120 litros</option>
+                <option value="130">130 litros</option>
+                <option value="140">140 litros</option>
+                <option value="150">150 litros</option>
+                <option value="160">160 litros</option>
+                <option value="170">170 litros</option>
+                <option value="180">180 litros</option>
+                <option value="190">190 litros</option>
+                <option value="200">200 litros</option>
+                <option value="outro">Outro</option>
               </select>
             </div>
           <div class="form-group col-md-12 text-center">
-            <label class="my-1 mr-2" name="quantidadebombonas" for="quantidade de bombonas">Quantidade de bombonas com as quais trabalha</label>
-            <select class="custom-select my-1 mr-sm-2" id="quantidadebombonas">
+            <label class="my-1 mr-2" for="quantidadebombonas">Quantidade de bombonas com as quais trabalha</label>
+            <select class="custom-select my-1 mr-sm-2" name="quantidadebombonas" id="quantidadebombonas">
               <option selected disabled>Selecione</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -267,7 +267,7 @@
               <option value="18">18</option>
               <option value="19">19</option>
               <option value="20">20</option>
-              <option value="21">Outro</option>
+              <option value="outro">Outro</option>
             </select>
           </div>
 

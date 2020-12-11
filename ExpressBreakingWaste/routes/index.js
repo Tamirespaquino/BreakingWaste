@@ -11,15 +11,18 @@ var quemsomos = require('./quemsomos');
 var residuos = require('./residuos');
 var resultado = require('./resultadobusca');
 
+const authMiddleware = require('../middlewares/auth')
+
 
 cadastrese(router)
-//carrinho(router)
-contato(router)
 entre(router)
 home(router)
-perfil(router)
 quemsomos(router)
 residuos(router)
+//carrinho(router)
+router.use(authMiddleware)
+contato(router)
+perfil(router)
 resultado(router)
 
 module.exports = router;
