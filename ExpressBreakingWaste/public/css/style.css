@@ -937,3 +937,16 @@ justify-content: center;
             bottom: 45px;
         
       }
+  }
+
+
+
+
+  /* API DO GOOGLE NA HOME */
+
+.api-google{
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    margin-bottom: -60px ;
+}
