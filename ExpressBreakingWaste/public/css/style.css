@@ -79,6 +79,12 @@ ul {
     width: 45vw;
 }
 
+/* configuração exclusiva para banner da pagina residuos */ 
+
+.nav-config{
+    margin-bottom: 0px !important;
+}
+
 /* CONTEUDO PRINCIPAL DA HOME */
 
 /* *********************************************  */
@@ -592,6 +598,7 @@ justify-content: center;
           text-align: center;
           background-color: #14b241;
           line-height: 40px;
+          margin-bottom: 0px;
       }
   
 
@@ -829,7 +836,7 @@ justify-content: center;
     
   }
 
-  @media (max-width: 767px){
+    @media (max-width: 767px){
       
       .user-name, .ramo-name{
         text-align: center;
@@ -853,7 +860,7 @@ justify-content: center;
           width: 1.5em;
           height: 1.5em;
       }
-      )
+      
     }
 
 
