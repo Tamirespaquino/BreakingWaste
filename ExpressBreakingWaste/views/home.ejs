@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <script type="text/javascript" src="/js/script.js"></script>
   
   <!--Tipografia-->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -99,10 +100,12 @@
                 descarte de resíduos químicos mais rápida e descomplicada
               </h3>
             </div>
-
+            
             <br>
             <h4 class="chamadaform">Faça sua cotação gratuitamente:</h4>
-          <div id="formulario">
+
+            
+          <div id="formulario"> 
             <div class="form-group">
               <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de resíduo</label>
               <select class="custom-select my-1 mr-sm-2" id="residuos">
@@ -147,59 +150,57 @@
                 <option value="21">Outro</option>
               </select>
             </div>
-          <div class="form-group">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
-            <select class="custom-select my-1 mr-sm-2" id="quantidadebombonas">
-              <option selected disabled>Selecione</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">Outro</option>
-            </select>
+            <div class="form-group">
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantidade de bombonas</label>
+              <select class="custom-select my-1 mr-sm-2" id="quantidadebombonas">
+                <option selected disabled>Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputCEP">CEP de Retirada</label>
+              <input type="text" class="form-control" id="inputCEP">
+            </div>
+          
+          
+            <button type="button" class="btn btn-success">Adicionar Formulário</button>
+            <button type="button" id ="enviarForms" onclick ="myfunction()" class="btn btn-success">Enviar Formulário</button>
+            <br>
+            <br>
           </div>
-          <div class="form-group">
-            <label for="inputCEP">CEP de Retirada</label>
-            <input type="text" class="form-control" id="inputCEP">
-          </div>
+            <div id="adicionar"></div>
         </div>
-          <button type="button" class="btn btn-success">Descartar</button>
-          <button type="button" id="adicionar" onclick ="myfunction()" class="btn btn-success">Adicionar formulário</button>
-          <br>
-          <br>
-      </div>
       <div class="imglogistica container col-lg-6">
           <img class="img1" src="/img/Asset 1_1.svg" alt="Logística"  />
       </div>
-  </div>
+    </div>
 
-  <div id="mapid"></div>
+  
+  
 
-  <script>
-    let adicione = document.getElementById("adicionar")
-    let forms = document.getElementById("formulario")
-    
-    function myfunction(){
-      
-      document.body.appendChild(forms)
-    }
-  </script>
+
+<div class="api-google" id="map"> </div>      
+  
   <!--<div>
     <img class="image-google" alt="mapa-google" src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=14&size=400x400&key=AIzaSyANzagXYE7ZLsP1da8y7MII5lQ5saG29UQ
     "/>
@@ -207,7 +208,9 @@
 
   <!--Footer-->
   <%- include('partials/footer') %> 
-
+  
+  <!--script google maps-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMjmvfJm8kZXCdXiJ5yLs28cw3TGjj3CQ&callback=initMap" async defer></script>
   
   <!--JQuery, JS e Popper.Js-->
   <script
@@ -220,6 +223,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
+    
 </body>
 
 

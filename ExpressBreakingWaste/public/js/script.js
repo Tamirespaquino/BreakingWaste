@@ -204,3 +204,30 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     countCartTotal();
 }
+
+
+
+
+//api do google 
+
+var map;
+function initMap() {
+   map = new google.maps.Map(document.getElementById('map'), {
+       center: {lat: -34.397, lng: 150.644},
+       zoom: 8
+   });
+}
+
+// function do botão da home
+
+function myfunction(){
+
+    let forms = document.getElementById("formulario")
+    let box = document.getElementById("adicionar")
+    let eForms = document.getElementById("enviarForms")
+
+
+    forms.innerHTML = "<h4>Obrigado por utilizar a BreakingWaste</h3>";
+    alert("Formulário Enviado com sucesso!");
+
+}
