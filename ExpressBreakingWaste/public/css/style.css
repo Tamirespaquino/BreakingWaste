@@ -186,6 +186,10 @@ ul {
     height: 200px;
 }
 
+input {
+    -webkit-box-shadow: rgb(207, 203, 203);
+}
+
 /* PAGINA CADASTRE-SE CONTEUDO */
 
 /* *********************************************  */

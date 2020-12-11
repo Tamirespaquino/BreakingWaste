@@ -50,8 +50,9 @@ module.exports = {
 
           case 9:
             user.password = undefined;
-            req.session.usuario = user;
-            return _context.abrupt("return", res.json(user));
+            req.session.usuario = user; //return res.json(user);
+
+            return _context.abrupt("return", res.redirect('/perfil'));
 
           case 12:
           case "end":
@@ -59,5 +60,9 @@ module.exports = {
         }
       }
     });
+  },
+  logout: function logout(req, res) {
+    req.session.destroy();
+    res.redirect('/entre');
   }
 };

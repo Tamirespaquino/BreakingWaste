@@ -16,9 +16,6 @@ var _require3 = require('../models'),
     Pedido = _require3.Pedido;
 
 module.exports = {
-  entre: function entre(req, res, next) {
-    res.render('perfilusuario');
-  },
   visualizarempresa: function visualizarempresa(req, res, next) {
     var id = req.params.id;
     var empresa = empresa.find(function (empresa) {
@@ -29,7 +26,6 @@ module.exports = {
     });
   },
   editar: ('/perfilusuario', function (req, res, next) {
-    //igual app.get /cad-pagamento
     var id = req.params.id;
     var empresa = empresa.find(function (empresa) {
       return empresa.id == id;
@@ -38,8 +34,7 @@ module.exports = {
       empresa: empresa
     });
   }),
-  alterar: ('/add-formUsuario', function (req, res, next) {
-    //igual app.post /add-pagamento
+  alterar: ('/cadastrese', function (req, res, next) {
     var id = req.params.id;
     var empresa = empresa.find(function (empresa) {
       return empresa.id == id;
@@ -49,11 +44,11 @@ module.exports = {
     senha = password_hashed;
     razao = req.body.razaoSocial;
     cnpj = req.body.cnpj;
-    telefone = req.body.cnpj;
+    telefone = req.body.telefone;
     endereco = req.body.endereco;
-    numero = req.body.endereco;
+    numero = req.body.numero;
     bairro = req.body.bairro;
-    complemento = req.body.bairro;
+    complemento = req.body.complemento;
     cidade = req.body.cidade;
     estado = req.body.estado;
     cep = req.body.cep;
@@ -75,10 +70,11 @@ module.exports = {
   criarnovo: function criarnovo(req, res, next) {
     res.render('perfilusuario/criar');
   },
-  user: ('/add-formUsuario', function (req, res) {
-    res.render('perfilusuario');
-  }, ('/add-formUsuario', function (req, res) {
-    res.send("Nome: " + req.body.nome);
-    res.send("E-mail: " + req.body.email);
-  }))
+  user: function user(req, res) {
+    var usuario = req.session.usuario;
+    console.log(usuario);
+    res.render('perfilusuario', {
+      usuario: usuario
+    });
+  }
 };

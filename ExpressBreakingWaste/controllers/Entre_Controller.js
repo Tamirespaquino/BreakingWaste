@@ -27,6 +27,15 @@ module.exports = {
 
 
 
-        return res.json(user);
+        //return res.json(user);
+        return res.redirect('/perfil');
+    },
+
+    logout: function(req, res) {
+        req.session.destroy()
+        res.redirect('/entre')
+
     }
+
+
 }

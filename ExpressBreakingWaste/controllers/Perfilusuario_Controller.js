@@ -10,23 +10,20 @@ const { Pedido } = require('../models')
 
 
 module.exports = {
-    entre: function (req, res, next) {
-        res.render('perfilusuario');
-    },
-
+   
     visualizarempresa: function (req, res, next) {
         const id = req.params.id;
         const empresa = empresa.find(empresa => empresa.id == id);
         res.render('perfilusuario/mostrar', { empresa });
     },
 
-    editar: ('/perfilusuario', function (req, res, next) { //igual app.get /cad-pagamento
+    editar: ('/perfilusuario', function (req, res, next) { 
         const id = req.params.id;
         const empresa = empresa.find(empresa => empresa.id == id);
         res.render('perfilusuario/editar', { empresa });
     }),
 
-    alterar: ('/add-formUsuario', function (req, res, next) { //igual app.post /add-pagamento
+    alterar: ('/cadastrese', function (req, res, next) { 
         const id = req.params.id;
         const empresa = empresa.find(empresa => empresa.id == id);
 
@@ -35,11 +32,11 @@ module.exports = {
         senha = password_hashed;
         razao = req.body.razaoSocial;
         cnpj = req.body.cnpj;
-        telefone = req.body.cnpj;
+        telefone = req.body.telefone;
         endereco = req.body.endereco;
-        numero = req.body.endereco;
+        numero = req.body.numero;
         bairro = req.body.bairro;
-        complemento = req.body.bairro;
+        complemento = req.body.complemento;
         cidade = req.body.cidade;
         estado = req.body.estado;
         cep = req.body.cep;
@@ -66,15 +63,11 @@ module.exports = {
         res.render('perfilusuario/criar');
     },
 
-    user: ('/add-formUsuario', function(req, res) {
-        res.render('perfilusuario');
-    },
-     ('/add-formUsuario', function(req, res) {
-        res.send("Nome: " + req.body.nome);
-        res.send("E-mail: " + req.body.email);
-
-    })
-
-    )
+    user: function(req, res) {
+        const { usuario } = req.session;
+        console.log(usuario);
+        res.render('perfilusuario', { usuario });
+    }
+            
 
 }
